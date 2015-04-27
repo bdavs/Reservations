@@ -16,5 +16,23 @@ namespace Reservations
         {
             InitializeComponent();
         }
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminModeButton_Click(object sender, EventArgs e)
+        {
+            AdminPassword AP = new AdminPassword();
+            AP.Show();
+            //this.Close();
+
+        }
+
+        private void SeatSelectButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
