@@ -1,6 +1,6 @@
 ﻿namespace Reservations
 {
-    partial class Form1
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TheaterSelectBox = new System.Windows.Forms.ComboBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
-            this.TimesBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CreateNewUserButton = new System.Windows.Forms.Button();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.ShowsBox = new System.Windows.Forms.ListBox();
+            this.CheckoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // TheaterSelectBox
-            // 
-            this.TheaterSelectBox.FormattingEnabled = true;
-            this.TheaterSelectBox.Location = new System.Drawing.Point(432, 29);
-            this.TheaterSelectBox.Name = "TheaterSelectBox";
-            this.TheaterSelectBox.Size = new System.Drawing.Size(121, 21);
-            this.TheaterSelectBox.TabIndex = 0;
-            this.TheaterSelectBox.Text = "Select Theater";
             // 
             // NameTextBox
             // 
@@ -60,17 +50,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(433, 57);
+            this.comboBox1.Location = new System.Drawing.Point(387, 46);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Number of Tickets";
             // 
             // SeatSelectButton
             // 
-            this.SeatSelectButton.Location = new System.Drawing.Point(211, 12);
+            this.SeatSelectButton.Location = new System.Drawing.Point(387, 73);
             this.SeatSelectButton.Name = "SeatSelectButton";
-            this.SeatSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.SeatSelectButton.Size = new System.Drawing.Size(130, 35);
             this.SeatSelectButton.TabIndex = 3;
             this.SeatSelectButton.Text = "Select Seats";
             this.SeatSelectButton.UseVisualStyleBackColor = true;
@@ -78,35 +68,26 @@
             // 
             // AdminModeButton
             // 
-            this.AdminModeButton.Location = new System.Drawing.Point(505, 303);
+            this.AdminModeButton.Location = new System.Drawing.Point(486, 212);
             this.AdminModeButton.Name = "AdminModeButton";
-            this.AdminModeButton.Size = new System.Drawing.Size(75, 23);
+            this.AdminModeButton.Size = new System.Drawing.Size(45, 34);
             this.AdminModeButton.TabIndex = 4;
             this.AdminModeButton.Text = "Admin mode";
             this.AdminModeButton.UseVisualStyleBackColor = true;
             this.AdminModeButton.Click += new System.EventHandler(this.AdminModeButton_Click);
             // 
-            // TimesBox
+            // CreateNewUserButton
             // 
-            this.TimesBox.FormattingEnabled = true;
-            this.TimesBox.Location = new System.Drawing.Point(433, 85);
-            this.TimesBox.Name = "TimesBox";
-            this.TimesBox.Size = new System.Drawing.Size(121, 21);
-            this.TimesBox.TabIndex = 5;
-            this.TimesBox.Text = "Select Show Time";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Or Create New User";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CreateNewUserButton.Location = new System.Drawing.Point(138, 9);
+            this.CreateNewUserButton.Name = "CreateNewUserButton";
+            this.CreateNewUserButton.Size = new System.Drawing.Size(119, 23);
+            this.CreateNewUserButton.TabIndex = 6;
+            this.CreateNewUserButton.Text = "Or Create New User";
+            this.CreateNewUserButton.UseVisualStyleBackColor = true;
             // 
             // monthCalendar
             // 
-            this.monthCalendar.Location = new System.Drawing.Point(13, 74);
+            this.monthCalendar.Location = new System.Drawing.Point(12, 44);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 7;
             this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
@@ -114,25 +95,33 @@
             // ShowsBox
             // 
             this.ShowsBox.FormattingEnabled = true;
-            this.ShowsBox.Location = new System.Drawing.Point(252, 74);
+            this.ShowsBox.Location = new System.Drawing.Point(251, 46);
             this.ShowsBox.Name = "ShowsBox";
             this.ShowsBox.Size = new System.Drawing.Size(130, 160);
             this.ShowsBox.TabIndex = 8;
+            // 
+            // CheckoutButton
+            // 
+            this.CheckoutButton.Location = new System.Drawing.Point(387, 115);
+            this.CheckoutButton.Name = "CheckoutButton";
+            this.CheckoutButton.Size = new System.Drawing.Size(130, 33);
+            this.CheckoutButton.TabIndex = 9;
+            this.CheckoutButton.Text = "Checkout";
+            this.CheckoutButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 338);
+            this.ClientSize = new System.Drawing.Size(543, 258);
+            this.Controls.Add(this.CheckoutButton);
             this.Controls.Add(this.ShowsBox);
             this.Controls.Add(this.monthCalendar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.TimesBox);
+            this.Controls.Add(this.CreateNewUserButton);
             this.Controls.Add(this.AdminModeButton);
             this.Controls.Add(this.SeatSelectButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.NameTextBox);
-            this.Controls.Add(this.TheaterSelectBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -142,15 +131,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox TheaterSelectBox;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button SeatSelectButton;
         private System.Windows.Forms.Button AdminModeButton;
-        private System.Windows.Forms.ComboBox TimesBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CreateNewUserButton;
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.ListBox ShowsBox;
+        private System.Windows.Forms.Button CheckoutButton;
     }
 }
-
