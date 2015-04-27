@@ -28,11 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.SuspendLayout();
+            // 
+            // monthCalendar
+            // 
+            this.monthCalendar.Location = new System.Drawing.Point(18, 18);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 8;
+            // 
+            // AdminForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(519, 196);
+            this.Controls.Add(this.monthCalendar);
+            this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MonthCalendar monthCalendar;
     }
 }
