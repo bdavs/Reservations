@@ -66,6 +66,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPassword.resx">
       <DependentUpon>AdminPassword.cs</DependentUpon>
     </EmbeddedResource>
