@@ -12,10 +12,10 @@ using System.Xml.Serialization;
 
 namespace Reservations
 {
-    public partial class Form1 : Form
+    public partial class UserForm : Form
     {
         public List<ShowTime> showTimeList;
-        public Form1()
+        public UserForm()
         {
             InitializeComponent();
             showTimeList = ReadXML<ShowTime>("..\\..\\showtimes.xml");
