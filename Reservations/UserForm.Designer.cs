@@ -50,7 +50,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(387, 46);
+            this.comboBox1.Location = new System.Drawing.Point(465, 46);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 2;
@@ -58,7 +58,7 @@
             // 
             // SeatSelectButton
             // 
-            this.SeatSelectButton.Location = new System.Drawing.Point(387, 73);
+            this.SeatSelectButton.Location = new System.Drawing.Point(465, 73);
             this.SeatSelectButton.Name = "SeatSelectButton";
             this.SeatSelectButton.Size = new System.Drawing.Size(130, 35);
             this.SeatSelectButton.TabIndex = 3;
@@ -68,7 +68,7 @@
             // 
             // AdminModeButton
             // 
-            this.AdminModeButton.Location = new System.Drawing.Point(486, 212);
+            this.AdminModeButton.Location = new System.Drawing.Point(550, 213);
             this.AdminModeButton.Name = "AdminModeButton";
             this.AdminModeButton.Size = new System.Drawing.Size(45, 34);
             this.AdminModeButton.TabIndex = 4;
@@ -97,23 +97,23 @@
             this.ShowsBox.FormattingEnabled = true;
             this.ShowsBox.Location = new System.Drawing.Point(251, 46);
             this.ShowsBox.Name = "ShowsBox";
-            this.ShowsBox.Size = new System.Drawing.Size(130, 160);
+            this.ShowsBox.Size = new System.Drawing.Size(208, 160);
             this.ShowsBox.TabIndex = 8;
             // 
             // CheckoutButton
             // 
-            this.CheckoutButton.Location = new System.Drawing.Point(387, 115);
+            this.CheckoutButton.Location = new System.Drawing.Point(465, 115);
             this.CheckoutButton.Name = "CheckoutButton";
             this.CheckoutButton.Size = new System.Drawing.Size(130, 33);
             this.CheckoutButton.TabIndex = 9;
             this.CheckoutButton.Text = "Checkout";
             this.CheckoutButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 258);
+            this.ClientSize = new System.Drawing.Size(607, 259);
             this.Controls.Add(this.CheckoutButton);
             this.Controls.Add(this.ShowsBox);
             this.Controls.Add(this.monthCalendar);
@@ -122,7 +122,7 @@
             this.Controls.Add(this.SeatSelectButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.NameTextBox);
-            this.Name = "Form1";
+            this.Name = "UserForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

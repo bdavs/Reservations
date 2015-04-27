@@ -78,6 +78,7 @@ namespace Reservations
             ShowsBox.Items.AddRange(l);
             //ShowsBox.DisplayMember = "Name";
             ShowsBox.DisplayMember = "VenueName";
+            //ShowsBox.DisplayMember ="EventName";
         }
     }
 }
