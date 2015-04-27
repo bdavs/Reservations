@@ -35,13 +35,14 @@
             this.AdminModeButton = new System.Windows.Forms.Button();
             this.TimesBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.ShowsBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // TheaterSelectBox
             // 
             this.TheaterSelectBox.FormattingEnabled = true;
-            this.TheaterSelectBox.Location = new System.Drawing.Point(13, 68);
+            this.TheaterSelectBox.Location = new System.Drawing.Point(432, 29);
             this.TheaterSelectBox.Name = "TheaterSelectBox";
             this.TheaterSelectBox.Size = new System.Drawing.Size(121, 21);
             this.TheaterSelectBox.TabIndex = 0;
@@ -59,7 +60,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 96);
+            this.comboBox1.Location = new System.Drawing.Point(433, 57);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
@@ -88,7 +89,7 @@
             // TimesBox
             // 
             this.TimesBox.FormattingEnabled = true;
-            this.TimesBox.Location = new System.Drawing.Point(14, 124);
+            this.TimesBox.Location = new System.Drawing.Point(433, 85);
             this.TimesBox.Name = "TimesBox";
             this.TimesBox.Size = new System.Drawing.Size(121, 21);
             this.TimesBox.TabIndex = 5;
@@ -103,18 +104,28 @@
             this.button1.Text = "Or Create New User";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // monthCalendar1
+            // monthCalendar
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(211, 47);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 7;
+            this.monthCalendar.Location = new System.Drawing.Point(13, 74);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 7;
+            this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
+            // 
+            // ShowsBox
+            // 
+            this.ShowsBox.FormattingEnabled = true;
+            this.ShowsBox.Location = new System.Drawing.Point(252, 74);
+            this.ShowsBox.Name = "ShowsBox";
+            this.ShowsBox.Size = new System.Drawing.Size(130, 160);
+            this.ShowsBox.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 338);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.ShowsBox);
+            this.Controls.Add(this.monthCalendar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TimesBox);
             this.Controls.Add(this.AdminModeButton);
@@ -138,7 +149,8 @@
         private System.Windows.Forms.Button AdminModeButton;
         private System.Windows.Forms.ComboBox TimesBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar monthCalendar;
+        private System.Windows.Forms.ListBox ShowsBox;
     }
 }
 

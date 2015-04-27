@@ -36,6 +36,7 @@
             // 
             this.AdminPasswordBox.Location = new System.Drawing.Point(12, 12);
             this.AdminPasswordBox.Name = "AdminPasswordBox";
+            this.AdminPasswordBox.PasswordChar = '♥';
             this.AdminPasswordBox.Size = new System.Drawing.Size(138, 20);
             this.AdminPasswordBox.TabIndex = 0;
             this.AdminPasswordBox.Text = "Enter Admin Password";
