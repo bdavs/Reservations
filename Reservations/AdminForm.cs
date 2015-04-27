@@ -16,5 +16,10 @@ namespace Reservations
         {
             InitializeComponent();
         }
+
+        private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }
