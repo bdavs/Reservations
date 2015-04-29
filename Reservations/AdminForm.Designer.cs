@@ -77,6 +77,7 @@
             // 
             // EditUserButton
             // 
+            this.EditUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditUserButton.Location = new System.Drawing.Point(482, 53);
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(88, 27);
@@ -87,6 +88,7 @@
             // 
             // BackButton
             // 
+            this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackButton.Location = new System.Drawing.Point(482, 186);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(88, 27);
@@ -97,6 +99,7 @@
             // 
             // EditEventsButton
             // 
+            this.EditEventsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditEventsButton.Location = new System.Drawing.Point(482, 153);
             this.EditEventsButton.Name = "EditEventsButton";
             this.EditEventsButton.Size = new System.Drawing.Size(88, 27);
@@ -106,6 +109,7 @@
             // 
             // DelEventButton
             // 
+            this.DelEventButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelEventButton.Location = new System.Drawing.Point(482, 120);
             this.DelEventButton.Name = "DelEventButton";
             this.DelEventButton.Size = new System.Drawing.Size(88, 27);
@@ -115,6 +119,7 @@
             // 
             // ViewUserButton
             // 
+            this.ViewUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ViewUserButton.Location = new System.Drawing.Point(482, 86);
             this.ViewUserButton.Name = "ViewUserButton";
             this.ViewUserButton.Size = new System.Drawing.Size(88, 27);
@@ -136,6 +141,7 @@
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.UserList);
             this.Controls.Add(this.DateSelect);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminForm";
