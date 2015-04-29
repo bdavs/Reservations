@@ -17,10 +17,6 @@ namespace Reservations
             InitializeComponent();
         }
 
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
 
         private void CreateUserButton_Click(object sender, EventArgs e)
         {

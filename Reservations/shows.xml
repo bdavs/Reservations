@@ -4,9 +4,9 @@
     <Name>A Midsummer Night's Scream</Name>
     <Date>2015-05-05T19:00:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>14.99</Price>
     <Available>true</Available>
@@ -15,9 +15,9 @@
     <Name>Dog on a Cold Copper Floor</Name>
     <Date>2015-05-20T15:00:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Ford Theater</Name>
+      <Size>200</Size>
+      <Seats_Available>200</Seats_Available>
     </Venue>
     <Price>19.99</Price>
     <Available>true</Available>
@@ -26,9 +26,9 @@
     <Name>A Grape in the Moonlight</Name>
     <Date>2015-06-03T21:00:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Huntington Theater</Name>
+      <Size>400</Size>
+      <Seats_Available>400</Seats_Available>
     </Venue>
     <Price>19.99</Price>
     <Available>true</Available>
@@ -37,9 +37,9 @@
     <Name>A Lawn Bike Named Apathy</Name>
     <Date>2015-06-15T12:30:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Ford Theater</Name>
+      <Size>200</Size>
+      <Seats_Available>200</Seats_Available>
     </Venue>
     <Price>14.99</Price>
     <Available>true</Available>
@@ -48,9 +48,9 @@
     <Name>For White Girls Who Have Considered Patricide When the Tortise Is Enuf</Name>
     <Date>2015-06-25T18:30:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>19.99</Price>
     <Available>true</Available>
@@ -59,9 +59,9 @@
     <Name>An Action Figure's Mansion</Name>
     <Date>2015-07-01T10:00:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>14.99</Price>
     <Available>true</Available>
@@ -70,9 +70,9 @@
     <Name>Bromeo and Griliet</Name>
     <Date>2015-07-12T17:30:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>19.99</Price>
     <Available>true</Available>
@@ -81,9 +81,9 @@
     <Name>The Insignifigance of Abstaining Indifference</Name>
     <Date>2015-07-25T15:30:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>19.99</Price>
     <Available>true</Available>
@@ -92,9 +92,9 @@
     <Name>Birth of a Customer</Name>
     <Date>2015-08-03T03:45:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>4.99</Price>
     <Available>true</Available>
@@ -103,9 +103,9 @@
     <Name>Birth of a Customer</Name>
     <Date>2015-08-03T03:45:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>4.99</Price>
     <Available>true</Available>
@@ -114,9 +114,9 @@
     <Name>An Imperfect Wife</Name>
     <Date>2015-08-14T16:30:00</Date>
     <Venue>
-      <Size>0</Size>
-      <Seats_Available>0</Seats_Available>
-      <Seats_Taken>0</Seats_Taken>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
     </Venue>
     <Price>14.99</Price>
     <Available>true</Available>

@@ -37,6 +37,7 @@
             this.ShowsBox = new System.Windows.Forms.ListBox();
             this.CheckoutButton = new System.Windows.Forms.Button();
             this.ShowBoxTree = new System.Windows.Forms.TreeView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -119,11 +120,20 @@
             this.ShowBoxTree.Size = new System.Drawing.Size(182, 100);
             this.ShowBoxTree.TabIndex = 10;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(439, 154);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(121, 97);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 259);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.ShowBoxTree);
             this.Controls.Add(this.CheckoutButton);
             this.Controls.Add(this.ShowsBox);
@@ -152,5 +162,6 @@
         private System.Windows.Forms.ListBox ShowsBox;
         private System.Windows.Forms.Button CheckoutButton;
         private System.Windows.Forms.TreeView ShowBoxTree;
+        private System.Windows.Forms.ListView listView1;
     }
 }

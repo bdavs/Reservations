@@ -150,7 +150,7 @@
             this.creditCardBox.Name = "creditCardBox";
             this.creditCardBox.Size = new System.Drawing.Size(189, 20);
             this.creditCardBox.TabIndex = 14;
-            this.creditCardBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            
             // 
             // UserAccountForm
             // 
