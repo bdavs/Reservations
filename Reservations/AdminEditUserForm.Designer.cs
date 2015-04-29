@@ -1,6 +1,6 @@
 ﻿namespace Reservations
 {
-    partial class AdminForm
+    partial class AdminEditUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,84 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DateSelect = new System.Windows.Forms.MonthCalendar();
             this.UserList = new System.Windows.Forms.ListBox();
-            this.DateLabel = new System.Windows.Forms.Label();
             this.UserLabel = new System.Windows.Forms.Label();
             this.EditUserButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // DateSelect
-            // 
-            this.DateSelect.Location = new System.Drawing.Point(18, 51);
-            this.DateSelect.Name = "DateSelect";
-            this.DateSelect.TabIndex = 8;
-            this.DateSelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateSelected);
-            // 
             // UserList
             // 
             this.UserList.FormattingEnabled = true;
-            this.UserList.Location = new System.Drawing.Point(257, 51);
+            this.UserList.Location = new System.Drawing.Point(12, 54);
             this.UserList.Name = "UserList";
             this.UserList.Size = new System.Drawing.Size(208, 160);
-            this.UserList.TabIndex = 9;
-            this.UserList.SelectedIndexChanged += new System.EventHandler(this.UserList_SelectedIndexChanged);
-            // 
-            // DateLabel
-            // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(102, 18);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(53, 24);
-            this.DateLabel.TabIndex = 10;
-            this.DateLabel.Text = "Date";
+            this.UserList.TabIndex = 10;
             // 
             // UserLabel
             // 
             this.UserLabel.AutoSize = true;
             this.UserLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.Location = new System.Drawing.Point(334, 18);
+            this.UserLabel.Location = new System.Drawing.Point(77, 9);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(71, 24);
-            this.UserLabel.TabIndex = 11;
-            this.UserLabel.Text = "Events";
+            this.UserLabel.Size = new System.Drawing.Size(59, 24);
+            this.UserLabel.TabIndex = 12;
+            this.UserLabel.Text = "Users";
             // 
             // EditUserButton
             // 
-            this.EditUserButton.Location = new System.Drawing.Point(532, 68);
+            this.EditUserButton.Location = new System.Drawing.Point(280, 74);
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(88, 27);
-            this.EditUserButton.TabIndex = 12;
-            this.EditUserButton.Text = "View Users";
+            this.EditUserButton.TabIndex = 13;
+            this.EditUserButton.Text = "Edit User";
             this.EditUserButton.UseVisualStyleBackColor = true;
             this.EditUserButton.Click += new System.EventHandler(this.EditUserButton_Click);
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(532, 119);
+            this.BackButton.Location = new System.Drawing.Point(280, 128);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(88, 27);
-            this.BackButton.TabIndex = 13;
+            this.BackButton.TabIndex = 14;
             this.BackButton.Text = "Go Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // AdminForm
+            // AdminEditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 243);
+            this.ClientSize = new System.Drawing.Size(407, 246);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.EditUserButton);
             this.Controls.Add(this.UserLabel);
-            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.UserList);
-            this.Controls.Add(this.DateSelect);
-            this.Name = "AdminForm";
-            this.Text = "AdminForm";
-            this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.Name = "AdminEditUserForm";
+            this.Text = "AdminEditUserForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,9 +90,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar DateSelect;
         private System.Windows.Forms.ListBox UserList;
-        private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label UserLabel;
         private System.Windows.Forms.Button EditUserButton;
         private System.Windows.Forms.Button BackButton;

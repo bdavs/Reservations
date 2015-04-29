@@ -81,5 +81,10 @@ namespace Reservations
             ShowsBox.DisplayMember = "VenueName";
             //ShowsBox.DisplayMember ="EventName";
         }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -124,6 +124,7 @@
             this.Controls.Add(this.NameTextBox);
             this.Name = "UserForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

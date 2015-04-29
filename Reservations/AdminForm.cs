@@ -22,10 +22,26 @@ namespace Reservations
 
         }
 
-        private void newTheatre_Click(object sender, EventArgs e)
+        private void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TheatreForm TF = new TheatreForm();
-            TF.ShowDialog();
+
+        }
+
+        private void EditUserButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AdminEditUserForm Form = new AdminEditUserForm();
+            Form.Show();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
