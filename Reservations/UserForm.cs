@@ -86,5 +86,25 @@ namespace Reservations
         {
 
         }
+
+        private void CreateNewUserButton_Click(object sender, EventArgs e)
+        {
+            UserAccountForm UAF = new UserAccountForm();
+            UAF.Show();
+        }
+
+        private void CheckoutButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Your tickets will arrive soon.\nThank you", "Form Submit", MessageBoxButtons.OK);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                // Closes the parent form. 
+
+                this.Close();
+            }
+
+        }
     }
 }

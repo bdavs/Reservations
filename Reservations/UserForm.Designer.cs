@@ -84,6 +84,7 @@
             this.CreateNewUserButton.TabIndex = 6;
             this.CreateNewUserButton.Text = "Or Create New User";
             this.CreateNewUserButton.UseVisualStyleBackColor = true;
+            this.CreateNewUserButton.Click += new System.EventHandler(this.CreateNewUserButton_Click);
             // 
             // monthCalendar
             // 
@@ -108,6 +109,7 @@
             this.CheckoutButton.TabIndex = 9;
             this.CheckoutButton.Text = "Checkout";
             this.CheckoutButton.UseVisualStyleBackColor = true;
+            this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
             // UserForm
             // 
@@ -123,7 +125,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.NameTextBox);
             this.Name = "UserForm";
-            this.Text = "Form1";
+            this.Text = "Reservations";
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
