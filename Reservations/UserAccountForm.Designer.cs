@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.familySizeBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.CreateUserButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberBox = new System.Windows.Forms.MaskedTextBox();
+            this.creditCardBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 0;
+            this.nameBox.Location = new System.Drawing.Point(12, 29);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(189, 20);
+            this.nameBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -68,12 +68,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Family Size";
             // 
-            // textBox2
+            // familySizeBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 3;
+            this.familySizeBox.Location = new System.Drawing.Point(13, 189);
+            this.familySizeBox.Name = "familySizeBox";
+            this.familySizeBox.Size = new System.Drawing.Size(188, 20);
+            this.familySizeBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -93,12 +93,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Address";
             // 
-            // textBox4
+            // addressBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 20);
-            this.textBox4.TabIndex = 6;
+            this.addressBox.Location = new System.Drawing.Point(13, 70);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(188, 20);
+            this.addressBox.TabIndex = 6;
             // 
             // CreateUserButton
             // 
@@ -128,48 +128,48 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Email";
             // 
-            // textBox6
+            // emailBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(13, 109);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(189, 20);
-            this.textBox6.TabIndex = 9;
+            this.emailBox.Location = new System.Drawing.Point(13, 109);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(189, 20);
+            this.emailBox.TabIndex = 9;
             // 
-            // maskedTextBox1
+            // phoneNumberBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(13, 150);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(189, 20);
-            this.maskedTextBox1.TabIndex = 13;
+            this.phoneNumberBox.Location = new System.Drawing.Point(13, 150);
+            this.phoneNumberBox.Mask = "(999) 000-0000";
+            this.phoneNumberBox.Name = "phoneNumberBox";
+            this.phoneNumberBox.Size = new System.Drawing.Size(189, 20);
+            this.phoneNumberBox.TabIndex = 13;
             // 
-            // maskedTextBox2
+            // creditCardBox
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(12, 232);
-            this.maskedTextBox2.Mask = "0000-0000-0000-00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(189, 20);
-            this.maskedTextBox2.TabIndex = 14;
-            this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            this.creditCardBox.Location = new System.Drawing.Point(12, 232);
+            this.creditCardBox.Mask = "0000-0000-0000-00000";
+            this.creditCardBox.Name = "creditCardBox";
+            this.creditCardBox.Size = new System.Drawing.Size(189, 20);
+            this.creditCardBox.TabIndex = 14;
+            this.creditCardBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // UserAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 315);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.creditCardBox);
+            this.Controls.Add(this.phoneNumberBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.emailBox);
             this.Controls.Add(this.CreateUserButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.familySizeBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameBox);
             this.Name = "UserAccountForm";
             this.Text = "UserAccountForm";
             this.ResumeLayout(false);
@@ -179,18 +179,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox familySizeBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.Button CreateUserButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.MaskedTextBox phoneNumberBox;
+        private System.Windows.Forms.MaskedTextBox creditCardBox;
     }
 }
