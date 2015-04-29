@@ -21,5 +21,27 @@ namespace Reservations
         {
 
         }
+
+        private void UserList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditUserButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AdminEditUserForm Form = new AdminEditUserForm();
+            Form.Show();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
