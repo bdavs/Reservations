@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CreateUserButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -100,15 +100,15 @@
             this.textBox4.Size = new System.Drawing.Size(188, 20);
             this.textBox4.TabIndex = 6;
             // 
-            // button1
+            // CreateUserButton
             // 
-            this.button1.Location = new System.Drawing.Point(68, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Create User";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CreateUserButton.Location = new System.Drawing.Point(68, 270);
+            this.CreateUserButton.Name = "CreateUserButton";
+            this.CreateUserButton.Size = new System.Drawing.Size(75, 23);
+            this.CreateUserButton.TabIndex = 8;
+            this.CreateUserButton.Text = "Create User";
+            this.CreateUserButton.UseVisualStyleBackColor = true;
+            this.CreateUserButton.Click += new System.EventHandler(this.CreateUserButton_Click);
             // 
             // label5
             // 
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CreateUserButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label3);
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CreateUserButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
