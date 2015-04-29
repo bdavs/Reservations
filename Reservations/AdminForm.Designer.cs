@@ -125,6 +125,8 @@
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.UserList);
             this.Controls.Add(this.DateSelect);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
