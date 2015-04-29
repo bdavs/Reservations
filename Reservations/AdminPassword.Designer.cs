@@ -42,6 +42,7 @@
             this.AdminPasswordBox.Text = "Enter Admin Password";
             this.AdminPasswordBox.TextChanged += new System.EventHandler(this.AdminPasswordBox_TextChanged);
             this.AdminPasswordBox.Enter += new System.EventHandler(this.AdminPasswordBox_Enter);
+            this.AdminPasswordBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminPasswordBox_KeyPress);
             // 
             // AdminPasswordEnter
             // 
@@ -63,6 +64,7 @@
             this.Name = "AdminPassword";
             this.Text = "AdminPassword";
             this.Load += new System.EventHandler(this.AdminPassword_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminPassword_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

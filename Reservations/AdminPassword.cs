@@ -43,5 +43,19 @@ namespace Reservations
         {
             
         }
+
+        private void AdminPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void AdminPasswordBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                AdminPasswordEnter_Click(sender,e);
+                
+            }
+        }
     }
 }

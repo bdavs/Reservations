@@ -36,6 +36,7 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.EditEventsButton = new System.Windows.Forms.Button();
             this.DelEventButton = new System.Windows.Forms.Button();
+            this.ViewUserButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateSelect
@@ -86,7 +87,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(482, 152);
+            this.BackButton.Location = new System.Drawing.Point(482, 186);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(88, 27);
             this.BackButton.TabIndex = 13;
@@ -96,7 +97,7 @@
             // 
             // EditEventsButton
             // 
-            this.EditEventsButton.Location = new System.Drawing.Point(482, 119);
+            this.EditEventsButton.Location = new System.Drawing.Point(482, 153);
             this.EditEventsButton.Name = "EditEventsButton";
             this.EditEventsButton.Size = new System.Drawing.Size(88, 27);
             this.EditEventsButton.TabIndex = 14;
@@ -105,18 +106,28 @@
             // 
             // DelEventButton
             // 
-            this.DelEventButton.Location = new System.Drawing.Point(482, 86);
+            this.DelEventButton.Location = new System.Drawing.Point(482, 120);
             this.DelEventButton.Name = "DelEventButton";
             this.DelEventButton.Size = new System.Drawing.Size(88, 27);
             this.DelEventButton.TabIndex = 15;
             this.DelEventButton.Text = "Remove Event";
             this.DelEventButton.UseVisualStyleBackColor = true;
             // 
+            // ViewUserButton
+            // 
+            this.ViewUserButton.Location = new System.Drawing.Point(482, 86);
+            this.ViewUserButton.Name = "ViewUserButton";
+            this.ViewUserButton.Size = new System.Drawing.Size(88, 27);
+            this.ViewUserButton.TabIndex = 16;
+            this.ViewUserButton.Text = "View All Users";
+            this.ViewUserButton.UseVisualStyleBackColor = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 243);
+            this.Controls.Add(this.ViewUserButton);
             this.Controls.Add(this.DelEventButton);
             this.Controls.Add(this.EditEventsButton);
             this.Controls.Add(this.BackButton);
@@ -145,5 +156,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button EditEventsButton;
         private System.Windows.Forms.Button DelEventButton;
+        private System.Windows.Forms.Button ViewUserButton;
     }
 }
