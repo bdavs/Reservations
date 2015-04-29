@@ -48,7 +48,7 @@
             // UserList
             // 
             this.UserList.FormattingEnabled = true;
-            this.UserList.Location = new System.Drawing.Point(257, 51);
+            this.UserList.Location = new System.Drawing.Point(257, 53);
             this.UserList.Name = "UserList";
             this.UserList.Size = new System.Drawing.Size(208, 160);
             this.UserList.TabIndex = 9;
@@ -76,7 +76,7 @@
             // 
             // EditUserButton
             // 
-            this.EditUserButton.Location = new System.Drawing.Point(482, 51);
+            this.EditUserButton.Location = new System.Drawing.Point(482, 53);
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(88, 27);
             this.EditUserButton.TabIndex = 12;
@@ -86,7 +86,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(482, 150);
+            this.BackButton.Location = new System.Drawing.Point(482, 152);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(88, 27);
             this.BackButton.TabIndex = 13;
@@ -96,7 +96,7 @@
             // 
             // EditEventsButton
             // 
-            this.EditEventsButton.Location = new System.Drawing.Point(482, 117);
+            this.EditEventsButton.Location = new System.Drawing.Point(482, 119);
             this.EditEventsButton.Name = "EditEventsButton";
             this.EditEventsButton.Size = new System.Drawing.Size(88, 27);
             this.EditEventsButton.TabIndex = 14;
@@ -105,7 +105,7 @@
             // 
             // DelEventButton
             // 
-            this.DelEventButton.Location = new System.Drawing.Point(482, 84);
+            this.DelEventButton.Location = new System.Drawing.Point(482, 86);
             this.DelEventButton.Name = "DelEventButton";
             this.DelEventButton.Size = new System.Drawing.Size(88, 27);
             this.DelEventButton.TabIndex = 15;
