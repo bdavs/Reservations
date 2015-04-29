@@ -1,6 +1,6 @@
 ﻿namespace Reservations
 {
-    partial class SeatForm
+    partial class TheatreLayout
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // SeatForm
+            // TheatreLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 486);
-            this.Name = "SeatForm";
-            this.Text = "SeatForm";
+            this.ClientSize = new System.Drawing.Size(442, 328);
+            this.Name = "TheatreLayout";
+            this.Text = "TheatreLayout";
+            this.Load += new System.EventHandler(this.TheatreLayout_Load);
             this.ResumeLayout(false);
 
         }
