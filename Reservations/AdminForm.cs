@@ -21,5 +21,11 @@ namespace Reservations
         {
 
         }
+
+        private void newTheatre_Click(object sender, EventArgs e)
+        {
+            TheatreForm TF = new TheatreForm();
+            TF.ShowDialog();
+        }
     }
 }
