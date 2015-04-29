@@ -80,7 +80,7 @@
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(88, 27);
             this.EditUserButton.TabIndex = 12;
-            this.EditUserButton.Text = "View Users";
+            this.EditUserButton.Text = "View Seats";
             this.EditUserButton.UseVisualStyleBackColor = true;
             this.EditUserButton.Click += new System.EventHandler(this.EditUserButton_Click);
             // 
