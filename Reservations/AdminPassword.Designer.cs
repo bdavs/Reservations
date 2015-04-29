@@ -40,6 +40,7 @@
             this.AdminPasswordBox.Size = new System.Drawing.Size(138, 20);
             this.AdminPasswordBox.TabIndex = 0;
             this.AdminPasswordBox.Text = "Enter Admin Password";
+            this.AdminPasswordBox.TextChanged += new System.EventHandler(this.AdminPasswordBox_TextChanged);
             this.AdminPasswordBox.Enter += new System.EventHandler(this.AdminPasswordBox_Enter);
             // 
             // AdminPasswordEnter
@@ -61,6 +62,7 @@
             this.Controls.Add(this.AdminPasswordBox);
             this.Name = "AdminPassword";
             this.Text = "AdminPassword";
+            this.Load += new System.EventHandler(this.AdminPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

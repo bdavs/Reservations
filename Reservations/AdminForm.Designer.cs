@@ -34,6 +34,7 @@
             this.UserLabel = new System.Windows.Forms.Label();
             this.EditUserButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.EditEventsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateSelect
@@ -74,7 +75,7 @@
             // 
             // EditUserButton
             // 
-            this.EditUserButton.Location = new System.Drawing.Point(532, 68);
+            this.EditUserButton.Location = new System.Drawing.Point(480, 51);
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(88, 27);
             this.EditUserButton.TabIndex = 12;
@@ -84,7 +85,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(532, 119);
+            this.BackButton.Location = new System.Drawing.Point(480, 117);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(88, 27);
             this.BackButton.TabIndex = 13;
@@ -92,11 +93,21 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // EditEventsButton
+            // 
+            this.EditEventsButton.Location = new System.Drawing.Point(480, 84);
+            this.EditEventsButton.Name = "EditEventsButton";
+            this.EditEventsButton.Size = new System.Drawing.Size(88, 27);
+            this.EditEventsButton.TabIndex = 14;
+            this.EditEventsButton.Text = "Edit Events";
+            this.EditEventsButton.UseVisualStyleBackColor = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 243);
+            this.ClientSize = new System.Drawing.Size(582, 243);
+            this.Controls.Add(this.EditEventsButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.EditUserButton);
             this.Controls.Add(this.UserLabel);
@@ -119,5 +130,6 @@
         private System.Windows.Forms.Label UserLabel;
         private System.Windows.Forms.Button EditUserButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button EditEventsButton;
     }
 }
