@@ -72,10 +72,11 @@ namespace Reservations
             foreach (ShowTime s in showTimeList)
                 if (s.Info.Date == mc.SelectionStart)
                     sss.Add(s);
-
+            
             ShowTime[] l = sss.ToArray();
-
+            
             ShowsBox.Items.Clear();
+            //ShowBoxTree.Nodes.AddRange(l);
             ShowsBox.Items.AddRange(l);
             //ShowsBox.DisplayMember = "Name";
             ShowsBox.DisplayMember = "VenueName";

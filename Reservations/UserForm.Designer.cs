@@ -36,6 +36,7 @@
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.ShowsBox = new System.Windows.Forms.ListBox();
             this.CheckoutButton = new System.Windows.Forms.Button();
+            this.ShowBoxTree = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -98,7 +99,7 @@
             this.ShowsBox.FormattingEnabled = true;
             this.ShowsBox.Location = new System.Drawing.Point(251, 46);
             this.ShowsBox.Name = "ShowsBox";
-            this.ShowsBox.Size = new System.Drawing.Size(208, 160);
+            this.ShowsBox.Size = new System.Drawing.Size(182, 95);
             this.ShowsBox.TabIndex = 8;
             // 
             // CheckoutButton
@@ -111,11 +112,19 @@
             this.CheckoutButton.UseVisualStyleBackColor = true;
             this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
+            // ShowBoxTree
+            // 
+            this.ShowBoxTree.Location = new System.Drawing.Point(251, 147);
+            this.ShowBoxTree.Name = "ShowBoxTree";
+            this.ShowBoxTree.Size = new System.Drawing.Size(182, 100);
+            this.ShowBoxTree.TabIndex = 10;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 259);
+            this.Controls.Add(this.ShowBoxTree);
             this.Controls.Add(this.CheckoutButton);
             this.Controls.Add(this.ShowsBox);
             this.Controls.Add(this.monthCalendar);
@@ -142,5 +151,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.ListBox ShowsBox;
         private System.Windows.Forms.Button CheckoutButton;
+        private System.Windows.Forms.TreeView ShowBoxTree;
     }
 }
