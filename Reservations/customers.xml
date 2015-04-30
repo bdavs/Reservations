@@ -40,4 +40,12 @@
     <Email>thespeare@gmail.com</Email>
     <Size>1</Size>
   </Customer>
+  <Customer>
+    <Name>sdfdf</Name>
+    <Address>SDAF</Address>
+    <Phone>(787) 878-7878</Phone>
+    <Credit>3434-3434-3434-3434</Credit>
+    <Email>SADS</Email>
+    <Size>2</Size>
+  </Customer>
 </ArrayOfCustomer>

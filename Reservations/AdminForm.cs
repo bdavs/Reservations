@@ -12,6 +12,7 @@ namespace Reservations
 {
     public partial class AdminForm : Form
     {
+        List<Customer> customerList = Customer.LoadCustomers();
         public AdminForm()
         {
             InitializeComponent();
@@ -42,6 +43,20 @@ namespace Reservations
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ViewUserButton_Click(object sender, EventArgs e)
+        {
+
+            if (UserList.Items.Count == 0)
+            {
+                foreach (Customer dude in customerList)
+                {
+                    UserList.Items.Add(dude);
+                }
+                UserList.DisplayMember = "Name";
+                UserList.Sorted = true;
+            }
         }
     }
 }

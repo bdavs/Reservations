@@ -126,6 +126,7 @@
             this.ViewUserButton.TabIndex = 16;
             this.ViewUserButton.Text = "View All Users";
             this.ViewUserButton.UseVisualStyleBackColor = true;
+            this.ViewUserButton.Click += new System.EventHandler(this.ViewUserButton_Click);
             // 
             // AdminForm
             // 
