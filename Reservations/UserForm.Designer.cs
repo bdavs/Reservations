@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             // 
             // CreateNewUserButton
             // 
-            this.CreateNewUserButton.Location = new System.Drawing.Point(127, 10);
+            this.CreateNewUserButton.Location = new System.Drawing.Point(173, 10);
             this.CreateNewUserButton.Name = "CreateNewUserButton";
             this.CreateNewUserButton.Size = new System.Drawing.Size(112, 23);
             this.CreateNewUserButton.TabIndex = 6;
@@ -100,19 +100,19 @@
             // 
             // showListBox
             // 
-            listViewGroup1.Header = "Show";
-            listViewGroup1.Name = "showGroup";
-            listViewGroup2.Header = "Venue";
-            listViewGroup2.Name = "venueGroup";
-            listViewGroup3.Header = "Time";
-            listViewGroup3.Name = "timeGroup";
+            listViewGroup4.Header = "Show";
+            listViewGroup4.Name = "showGroup";
+            listViewGroup5.Header = "Venue";
+            listViewGroup5.Name = "venueGroup";
+            listViewGroup6.Header = "Time";
+            listViewGroup6.Name = "timeGroup";
             this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
-            this.showListBox.Location = new System.Drawing.Point(251, 10);
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6});
+            this.showListBox.Location = new System.Drawing.Point(300, 10);
             this.showListBox.Name = "showListBox";
-            this.showListBox.Size = new System.Drawing.Size(603, 276);
+            this.showListBox.Size = new System.Drawing.Size(554, 276);
             this.showListBox.TabIndex = 11;
             this.showListBox.UseCompatibleStateImageBehavior = false;
             this.showListBox.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.showListBox_ColumnClick);
@@ -122,9 +122,9 @@
             this.nameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.nameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.nameComboBox.FormattingEnabled = true;
-            this.nameComboBox.Location = new System.Drawing.Point(16, 9);
+            this.nameComboBox.Location = new System.Drawing.Point(16, 10);
             this.nameComboBox.Name = "nameComboBox";
-            this.nameComboBox.Size = new System.Drawing.Size(105, 24);
+            this.nameComboBox.Size = new System.Drawing.Size(151, 24);
             this.nameComboBox.Sorted = true;
             this.nameComboBox.TabIndex = 12;
             this.nameComboBox.Text = "Enter Name";
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 295);
+            this.ClientSize = new System.Drawing.Size(1039, 295);
             this.Controls.Add(this.nameComboBox);
             this.Controls.Add(this.showListBox);
             this.Controls.Add(this.CheckoutButton);
