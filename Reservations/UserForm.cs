@@ -15,10 +15,14 @@ namespace Reservations
     public partial class UserForm : Form
     {
         public List<ShowTime> showTimeList;
+        public List<Customer> customerList;
         public UserForm()
         {
             InitializeComponent();
             showTimeList = ReadXML<ShowTime>("..\\..\\showtimes.xml");
+            customerList = Customer.LoadCustomers();
+            foreach (Customer c in customerList)
+                nameComboBox.Items.Add(c.Name);
         }
         // Read XML file into a list of objects
         public static List<T> ReadXML<T>(string path)
@@ -90,7 +94,22 @@ namespace Reservations
 
         private void CreateNewUserButton_Click(object sender, EventArgs e)
         {
+
             UserAccountForm UAF = new UserAccountForm();
+            if (CreateNewUserButton.Text == "Edit Info")
+            {
+                customerList = Customer.LoadCustomers();
+                Customer temp = new Customer();
+                foreach (Customer c in customerList)
+                    if (c.Name == nameComboBox.Text)
+                    {
+                        temp = c;
+                    }
+                customerList.Remove(temp);
+                Customer.SaveCustomers(customerList);
+                UAF = new UserAccountForm(temp.Name, temp.Address, temp.Email, temp.Phone, temp.Size, temp.Credit,"Save Info");
+            }
+            UAF.Refresh();
             UAF.Show();
         }
 
@@ -107,5 +126,29 @@ namespace Reservations
             }
 
         }
+
+        private void nameComboBox_Enter(object sender, EventArgs e)
+        {
+            nameComboBox.Items.Clear();
+            customerList = Customer.LoadCustomers();
+            foreach (Customer c in customerList)
+                nameComboBox.Items.Add(c.Name);
+        }
+
+        private void nameComboBox_TextChanged(object sender, EventArgs e)
+        {
+            foreach (string s in nameComboBox.Items)
+                if (s == nameComboBox.Text)
+                {
+                    CreateNewUserButton.Text = "Edit Info"; break;
+                }
+                else
+                    CreateNewUserButton.Text = "Or Create New User";
+            
+
+        }
+
+
+
     }
 }

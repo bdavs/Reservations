@@ -31,7 +31,6 @@
             this.nameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.familySizeBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.emailBox = new System.Windows.Forms.TextBox();
             this.phoneNumberBox = new System.Windows.Forms.MaskedTextBox();
             this.creditCardBox = new System.Windows.Forms.MaskedTextBox();
+            this.familySizeBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // nameBox
@@ -70,14 +70,6 @@
             this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Family Size";
-            // 
-            // familySizeBox
-            // 
-            this.familySizeBox.Location = new System.Drawing.Point(17, 233);
-            this.familySizeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.familySizeBox.Name = "familySizeBox";
-            this.familySizeBox.Size = new System.Drawing.Size(249, 22);
-            this.familySizeBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -159,16 +151,27 @@
             // 
             this.creditCardBox.Location = new System.Drawing.Point(16, 286);
             this.creditCardBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.creditCardBox.Mask = "0000-0000-0000-00000";
+            this.creditCardBox.Mask = "0000-0000-0000-0000";
             this.creditCardBox.Name = "creditCardBox";
             this.creditCardBox.Size = new System.Drawing.Size(251, 22);
             this.creditCardBox.TabIndex = 5;
+            // 
+            // familySizeBox
+            // 
+            this.familySizeBox.Location = new System.Drawing.Point(17, 234);
+            this.familySizeBox.Margin = new System.Windows.Forms.Padding(4);
+            this.familySizeBox.Mask = "000";
+            this.familySizeBox.Name = "familySizeBox";
+            this.familySizeBox.PromptChar = ' ';
+            this.familySizeBox.Size = new System.Drawing.Size(251, 22);
+            this.familySizeBox.TabIndex = 4;
             // 
             // UserAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 388);
+            this.Controls.Add(this.familySizeBox);
             this.Controls.Add(this.creditCardBox);
             this.Controls.Add(this.phoneNumberBox);
             this.Controls.Add(this.label5);
@@ -178,7 +181,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.familySizeBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameBox);
@@ -195,7 +197,6 @@
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox familySizeBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox addressBox;
@@ -205,5 +206,6 @@
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.MaskedTextBox phoneNumberBox;
         private System.Windows.Forms.MaskedTextBox creditCardBox;
+        private System.Windows.Forms.MaskedTextBox familySizeBox;
     }
 }
