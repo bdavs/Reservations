@@ -17,7 +17,7 @@ namespace Reservations
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new UserForm());
-            //Show.XMLInit();
+            
         }
     }
 }

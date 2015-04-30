@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
             this.CreateNewUserButton = new System.Windows.Forms.Button();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.ShowsBox = new System.Windows.Forms.ListBox();
             this.CheckoutButton = new System.Windows.Forms.Button();
-            this.ShowBoxTree = new System.Windows.Forms.TreeView();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.showListBox = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // NameTextBox
             // 
             this.NameTextBox.Location = new System.Drawing.Point(12, 12);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(120, 20);
+            this.NameTextBox.Size = new System.Drawing.Size(109, 20);
             this.NameTextBox.TabIndex = 1;
             this.NameTextBox.Text = "Enter Name";
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
@@ -52,7 +53,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(465, 46);
+            this.comboBox1.Location = new System.Drawing.Point(860, 46);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 2;
@@ -60,7 +61,7 @@
             // 
             // SeatSelectButton
             // 
-            this.SeatSelectButton.Location = new System.Drawing.Point(465, 73);
+            this.SeatSelectButton.Location = new System.Drawing.Point(860, 73);
             this.SeatSelectButton.Name = "SeatSelectButton";
             this.SeatSelectButton.Size = new System.Drawing.Size(130, 35);
             this.SeatSelectButton.TabIndex = 3;
@@ -70,7 +71,7 @@
             // 
             // AdminModeButton
             // 
-            this.AdminModeButton.Location = new System.Drawing.Point(550, 213);
+            this.AdminModeButton.Location = new System.Drawing.Point(945, 213);
             this.AdminModeButton.Name = "AdminModeButton";
             this.AdminModeButton.Size = new System.Drawing.Size(45, 34);
             this.AdminModeButton.TabIndex = 4;
@@ -80,9 +81,9 @@
             // 
             // CreateNewUserButton
             // 
-            this.CreateNewUserButton.Location = new System.Drawing.Point(138, 9);
+            this.CreateNewUserButton.Location = new System.Drawing.Point(127, 10);
             this.CreateNewUserButton.Name = "CreateNewUserButton";
-            this.CreateNewUserButton.Size = new System.Drawing.Size(119, 23);
+            this.CreateNewUserButton.Size = new System.Drawing.Size(112, 23);
             this.CreateNewUserButton.TabIndex = 6;
             this.CreateNewUserButton.Text = "Or Create New User";
             this.CreateNewUserButton.UseVisualStyleBackColor = true;
@@ -95,17 +96,9 @@
             this.monthCalendar.TabIndex = 7;
             this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
             // 
-            // ShowsBox
-            // 
-            this.ShowsBox.FormattingEnabled = true;
-            this.ShowsBox.Location = new System.Drawing.Point(251, 46);
-            this.ShowsBox.Name = "ShowsBox";
-            this.ShowsBox.Size = new System.Drawing.Size(182, 95);
-            this.ShowsBox.TabIndex = 8;
-            // 
             // CheckoutButton
             // 
-            this.CheckoutButton.Location = new System.Drawing.Point(465, 115);
+            this.CheckoutButton.Location = new System.Drawing.Point(860, 115);
             this.CheckoutButton.Name = "CheckoutButton";
             this.CheckoutButton.Size = new System.Drawing.Size(130, 33);
             this.CheckoutButton.TabIndex = 9;
@@ -113,30 +106,32 @@
             this.CheckoutButton.UseVisualStyleBackColor = true;
             this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
-            // ShowBoxTree
+            // showListBox
             // 
-            this.ShowBoxTree.Location = new System.Drawing.Point(251, 147);
-            this.ShowBoxTree.Name = "ShowBoxTree";
-            this.ShowBoxTree.Size = new System.Drawing.Size(182, 100);
-            this.ShowBoxTree.TabIndex = 10;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(439, 154);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            listViewGroup10.Header = "Show";
+            listViewGroup10.Name = "showGroup";
+            listViewGroup11.Header = "Venue";
+            listViewGroup11.Name = "venueGroup";
+            listViewGroup12.Header = "Time";
+            listViewGroup12.Name = "timeGroup";
+            this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup10,
+            listViewGroup11,
+            listViewGroup12});
+            this.showListBox.Location = new System.Drawing.Point(251, 10);
+            this.showListBox.Name = "showListBox";
+            this.showListBox.Size = new System.Drawing.Size(603, 276);
+            this.showListBox.TabIndex = 11;
+            this.showListBox.UseCompatibleStateImageBehavior = false;
+            this.showListBox.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.showListBox_ColumnClick);
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 259);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.ShowBoxTree);
+            this.ClientSize = new System.Drawing.Size(1024, 295);
+            this.Controls.Add(this.showListBox);
             this.Controls.Add(this.CheckoutButton);
-            this.Controls.Add(this.ShowsBox);
             this.Controls.Add(this.monthCalendar);
             this.Controls.Add(this.CreateNewUserButton);
             this.Controls.Add(this.AdminModeButton);
@@ -159,9 +154,7 @@
         private System.Windows.Forms.Button AdminModeButton;
         private System.Windows.Forms.Button CreateNewUserButton;
         private System.Windows.Forms.MonthCalendar monthCalendar;
-        private System.Windows.Forms.ListBox ShowsBox;
         private System.Windows.Forms.Button CheckoutButton;
-        private System.Windows.Forms.TreeView ShowBoxTree;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView showListBox;
     }
 }

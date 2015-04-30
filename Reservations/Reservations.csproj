@@ -72,7 +72,7 @@
     <Compile Include="SeatForm.Designer.cs">
       <DependentUpon>SeatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Show.cs" />
+    <Compile Include="Shows.cs" />
     <Compile Include="ShowTime.cs" />
     <Compile Include="TheatreForm.cs">
       <SubType>Form</SubType>
