@@ -16,7 +16,7 @@ namespace Reservations
         {
             InitializeComponent();
         }
-        public UserAccountForm(string n, string a, string e, string p, int f, string c,string s)
+        public UserAccountForm(string n, string a, string e, string p, int f, string c, string s)
         {
             InitializeComponent();
             nameBox.Text = n;
@@ -26,12 +26,10 @@ namespace Reservations
             familySizeBox.Text = f.ToString();
             creditCardBox.Text = c;
             CreateUserButton.Text = s;
-
         }
 
         private void CreateUserButton_Click(object sender, EventArgs e)
         {
-            //currently only field that cannot be blank is family size
             try
             {
                 Customer cumstomertemp = new Customer(this.nameBox.Text, this.addressBox.Text, this.phoneNumberBox.Text, this.creditCardBox.Text, this.emailBox.Text, int.Parse(this.familySizeBox.Text));
