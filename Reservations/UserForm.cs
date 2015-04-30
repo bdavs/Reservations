@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +11,74 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
 
+
 namespace Reservations
 {
     public partial class UserForm : Form
     {
+
+        private Hashtable[] groupTables;
+        // Declare a variable to store the current grouping column. 
+        int groupColumn = 0;
+
+        public List<Shows> showList;
         public List<ShowTime> showTimeList;
         public List<Customer> customerList;
         public UserForm()
         {
+
+            
             InitializeComponent();
+            showList = Shows.LoadShows();
+            listViewSetup();
+
+
+            
+            foreach (Shows s in showList)
+            {
+                monthCalendar.AddBoldedDate(s.Date);
+            }
+             
+           // ICollection<Shows> test = CollectionViewSource.GetDefaultView(showList);
+            
+        }
+        private void listViewSetup() 
+        {
+            //showListBox.Dock = DockStyle.Fill;
+            showListBox.View = View.Details;
+            showListBox.Sorting = SortOrder.Ascending;
+
+            // Create and initialize column headers for myListView.
+            ColumnHeader columnHeader0 = new ColumnHeader();
+            columnHeader0.Text = "Show";
+            columnHeader0.Width = showListBox.Width / 2;
+            ColumnHeader columnHeader1 = new ColumnHeader();
+            columnHeader1.Text = "Venue";
+            columnHeader1.Width = showListBox.Width/4;
+            ColumnHeader columnHeader2 = new ColumnHeader();
+            columnHeader2.Text = "Time";
+            columnHeader2.Width = showListBox.Width/4-2;
+
+            // Add the column headers to myListView.
+            showListBox.Columns.AddRange(new ColumnHeader[] { columnHeader0, columnHeader1, columnHeader2 });
+            foreach (Shows s in showList) 
+            {
+                if (s.Date.Date == monthCalendar.TodayDate)
+                {
+                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                    showListBox.Items.Add(t);
+                }
+            }
+
+            groupTables = new Hashtable[showListBox.Columns.Count];
+            for (int column = 0; column < showListBox.Columns.Count; column++)
+            {
+                // Create a hash table containing all the groups  
+                // needed for a single column.
+                groupTables[column] = CreateGroupsTable(column);
+            }
+
+
             showTimeList = ReadXML<ShowTime>("..\\..\\showtimes.xml");
             customerList = Customer.LoadCustomers();
             foreach (Customer c in customerList)
@@ -68,23 +128,17 @@ namespace Reservations
         {
             MonthCalendar mc = sender as MonthCalendar;
 
-            /*           Schedule[] l = (from s in schedule
-                                       where s.Info.Date == mc.SelectionStart
-                                       orderby s.Info.TimeOfDay
-                                       select s).ToArray();  */
-            List<ShowTime> sss = new List<ShowTime>();
-            foreach (ShowTime s in showTimeList)
-                if (s.Info.Date == mc.SelectionStart)
-                    sss.Add(s);
+            showListBox.Items.Clear();
+            foreach (Shows s in showList)
+            {
+                if (s.Date.Date == mc.SelectionStart)
+                {
+                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                    showListBox.Items.Add(t);
+                }
+            }
             
-            ShowTime[] l = sss.ToArray();
             
-            ShowsBox.Items.Clear();
-            //ShowBoxTree.Nodes.AddRange(l);
-            ShowsBox.Items.AddRange(l);
-            //ShowsBox.DisplayMember = "Name";
-            ShowsBox.DisplayMember = "VenueName";
-            //ShowsBox.DisplayMember ="EventName";
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -125,6 +179,119 @@ namespace Reservations
                 this.Close();
             }
 
+        }
+
+        private Hashtable CreateGroupsTable(int column)
+        {
+            // Create a Hashtable object.
+            Hashtable groups = new Hashtable();
+
+            // Iterate through the items in myListView. 
+            foreach (ListViewItem item in showListBox.Items)
+            {
+                // Retrieve the text value for the column. 
+                string subItemText = item.SubItems[column].Text;
+
+                // Use the initial letter instead if it is the first column. 
+                if (column == 0)
+                {
+                    subItemText = subItemText.Substring(0, 1);
+                }
+
+                // If the groups table does not already contain a group 
+                // for the subItemText value, add a new group using the  
+                // subItemText value for the group header and Hashtable key. 
+                if (!groups.Contains(subItemText))
+                {
+                    groups.Add(subItemText, new ListViewGroup(subItemText,
+                        HorizontalAlignment.Left));
+                }
+            }
+
+            // Return the Hashtable object. 
+            return groups;
+        }
+
+        private void SetGroups(int column)
+        {
+            // Remove the current groups.
+            showListBox.Groups.Clear();
+
+            // Retrieve the hash table corresponding to the column.
+            Hashtable groups = (Hashtable)groupTables[column];
+
+            // Copy the groups for the column to an array.
+            ListViewGroup[] groupsArray = new ListViewGroup[groups.Count];
+            groups.Values.CopyTo(groupsArray, 0);
+
+            // Sort the groups and add them to myListView.
+            Array.Sort(groupsArray, new ListViewGroupSorter(showListBox.Sorting));
+            showListBox.Groups.AddRange(groupsArray);
+
+            // Iterate through the items in myListView, assigning each  
+            // one to the appropriate group. 
+            foreach (ListViewItem item in showListBox.Items)
+            {
+                // Retrieve the subitem text corresponding to the column. 
+                string subItemText = item.SubItems[column].Text;
+
+                // For the Title column, use only the first letter. 
+                if (column == 0)
+                {
+                    subItemText = subItemText.Substring(0, 1);
+                }
+
+                // Assign the item to the matching group.
+                item.Group = (ListViewGroup)groups[subItemText];
+            }
+        }
+
+        private void showListBox_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (showListBox.Sorting == SortOrder.Descending ||
+                ((e.Column != groupColumn)))
+            {
+                showListBox.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                showListBox.Sorting = SortOrder.Descending;
+            }
+            groupColumn = e.Column;
+
+            // Set the groups to those created for the clicked column. 
+            
+            SetGroups(e.Column);
+           
+        }
+
+        private class ListViewGroupSorter : IComparer
+        {
+            private SortOrder order;
+
+            // Stores the sort order. 
+            public ListViewGroupSorter(SortOrder theOrder)
+            {
+                order = theOrder;
+            }
+
+            // Compares the groups by header value, using the saved sort 
+            // order to return the correct value. 
+            public int Compare(object x, object y)
+            {
+                int result = String.Compare(
+                    ((ListViewGroup)x).Header,
+                    ((ListViewGroup)y).Header
+                );
+                if (order == SortOrder.Ascending)
+                {
+                    return result;
+                }
+                else
+                {
+                    return -result;
+                }
+            }
         }
 
         private void nameComboBox_Enter(object sender, EventArgs e)
