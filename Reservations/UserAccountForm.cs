@@ -26,9 +26,10 @@ namespace Reservations
                 List<Customer> templist = Customer.LoadCustomers();
                 templist.Add(cumstomertemp);
                 Customer.SaveCustomers(templist);
+                this.Close();
             }
             catch (FormatException) { MessageBox.Show("Please Complete All Fields", "Field Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
+            
         }
     }
 }

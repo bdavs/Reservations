@@ -18,28 +18,24 @@ namespace Reservations
     {
 
         private Hashtable[] groupTables;
-        // Declare a variable to store the current grouping column. 
+        
         int groupColumn = 0;
 
         public List<Shows> showList;
-        public UserForm()
-        {
 
-            
+        public UserForm()
+        {   
             InitializeComponent();
             showList = Shows.LoadShows();
             listViewSetup();
-
-
-            
+  
             foreach (Shows s in showList)
             {
                 monthCalendar.AddBoldedDate(s.Date);
             }
              
-           // ICollection<Shows> test = CollectionViewSource.GetDefaultView(showList);
-            
         }
+
         private void listViewSetup() 
         {
             //showListBox.Dock = DockStyle.Fill;
@@ -75,10 +71,10 @@ namespace Reservations
                 // needed for a single column.
                 groupTables[column] = CreateGroupsTable(column);
             }
-
-
+            ListViewGroup test = showListBox.Groups[0];
+           // test.
         }
-        // Read XML file into a list of objects
+        
         public static List<T> ReadXML<T>(string path)
         {
             List<T> list = new List<T>();
@@ -148,7 +144,7 @@ namespace Reservations
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Your tickets will arrive soon.\nThank you", "Form Submit", MessageBoxButtons.OK);
+            var result = MessageBox.Show("Your tickets will arrive soon.\nThank you", "Form Submit", MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
@@ -227,8 +223,8 @@ namespace Reservations
 
         private void showListBox_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            if (showListBox.Sorting == SortOrder.Descending ||
-                ((e.Column != groupColumn)))
+
+            if (showListBox.Sorting == SortOrder.Descending ||(e.Column != groupColumn))
             {
                 showListBox.Sorting = SortOrder.Ascending;
             }
@@ -271,6 +267,32 @@ namespace Reservations
                     return -result;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showListBox.Items.Clear();
+            foreach (Shows s in showList)
+            {
+                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                    showListBox.Items.Add(t);
+                
+            }
+            groupTables = new Hashtable[showListBox.Columns.Count];
+            for (int column = 0; column < showListBox.Columns.Count; column++)
+            {
+                // Create a hash table containing all the groups  
+                // needed for a single column.
+                groupTables[column] = CreateGroupsTable(column);
+            }
+            //showListBox_ColumnClick(sender, new ColumnClickEventArgs(0));
+            showListBox.Sorting = SortOrder.Descending;
+            SetGroups(1);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

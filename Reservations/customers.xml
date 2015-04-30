@@ -32,4 +32,12 @@
     <Email>yourwrong@lifeisabitch.org</Email>
     <Size>1</Size>
   </Customer>
+  <Customer>
+    <Name>Johnny Test</Name>
+    <Address>123 Sesame St</Address>
+    <Phone>(777) 999-0987</Phone>
+    <Credit>1234-5678-9009-8763</Credit>
+    <Email>loljk@umassd.edu</Email>
+    <Size>3</Size>
+  </Customer>
 </ArrayOfCustomer>
