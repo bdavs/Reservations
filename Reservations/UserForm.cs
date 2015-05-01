@@ -22,7 +22,6 @@ namespace Reservations
         int groupColumn = 0;
 
         public List<Shows> showList;
-        public List<ShowTime> showTimeList;
         public List<Customer> customerList;
         public UserForm()
         {
@@ -79,7 +78,6 @@ namespace Reservations
             }
 
 
-            showTimeList = ReadXML<ShowTime>("..\\..\\showtimes.xml");
             customerList = Customer.LoadCustomers();
             foreach (Customer c in customerList)
                 nameComboBox.Items.Add(c.Name);
