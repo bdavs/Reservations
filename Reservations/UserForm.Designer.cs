@@ -115,9 +115,9 @@
             listViewGroup6.Header = "Time";
             listViewGroup6.Name = "timeGroup";
             this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6});
             this.showListBox.Location = new System.Drawing.Point(250, 22);
             this.showListBox.Margin = new System.Windows.Forms.Padding(2);
             this.showListBox.Name = "showListBox";
