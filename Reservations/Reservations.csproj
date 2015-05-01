@@ -73,7 +73,6 @@
       <DependentUpon>SeatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Shows.cs" />
-    <Compile Include="ShowTime.cs" />
     <Compile Include="TheatreForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,7 +147,6 @@
   <ItemGroup>
     <Content Include="customers.xml" />
     <Content Include="shows.xml" />
-    <Content Include="showtimes.xml" />
     <Content Include="venues.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

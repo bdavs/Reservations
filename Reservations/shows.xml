@@ -100,17 +100,6 @@
     <Available>true</Available>
   </Shows>
   <Shows>
-    <Name>Birth of a Customer</Name>
-    <Date>2015-08-03T03:45:00</Date>
-    <Venue>
-      <Name>Globe Theater</Name>
-      <Size>300</Size>
-      <Seats_Available>300</Seats_Available>
-    </Venue>
-    <Price>4.99</Price>
-    <Available>true</Available>
-  </Shows>
-  <Shows>
     <Name>An Imperfect Wife</Name>
     <Date>2015-08-14T16:30:00</Date>
     <Venue>
