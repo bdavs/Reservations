@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
             this.CreateNewUserButton = new System.Windows.Forms.Button();
@@ -39,21 +38,12 @@
             this.CheckoutButton = new System.Windows.Forms.Button();
             this.showListBox = new System.Windows.Forms.ListView();
             this.nameComboBox = new System.Windows.Forms.ComboBox();
-            
             this.selectDateLabel = new System.Windows.Forms.Label();
             this.selectEventLabel = new System.Windows.Forms.Label();
             this.displayAllShowsButton = new System.Windows.Forms.Button();
+            this.ticketsLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(758, 22);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Number of Tickets";
             // 
             // SeatSelectButton
             // 
@@ -108,16 +98,16 @@
             // 
             // showListBox
             // 
-            listViewGroup4.Header = "Show";
-            listViewGroup4.Name = "showGroup";
-            listViewGroup5.Header = "Venue";
-            listViewGroup5.Name = "venueGroup";
-            listViewGroup6.Header = "Time";
-            listViewGroup6.Name = "timeGroup";
+            listViewGroup1.Header = "Show";
+            listViewGroup1.Name = "showGroup";
+            listViewGroup2.Header = "Venue";
+            listViewGroup2.Name = "venueGroup";
+            listViewGroup3.Header = "Time";
+            listViewGroup3.Name = "timeGroup";
             this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.showListBox.Location = new System.Drawing.Point(250, 22);
             this.showListBox.Margin = new System.Windows.Forms.Padding(2);
             this.showListBox.Name = "showListBox";
@@ -141,16 +131,6 @@
             this.nameComboBox.TextChanged += new System.EventHandler(this.nameComboBox_TextChanged);
             this.nameComboBox.Enter += new System.EventHandler(this.nameComboBox_Enter);
             // 
-            // displayAllShowsButton
-            // 
-            this.displayAllShowsButton.Location = new System.Drawing.Point(758, 120);
-            this.displayAllShowsButton.Name = "displayAllShowsButton";
-            this.displayAllShowsButton.Size = new System.Drawing.Size(50, 86);
-            this.displayAllShowsButton.TabIndex = 12;
-            this.displayAllShowsButton.Text = "Display all shows";
-            this.displayAllShowsButton.UseVisualStyleBackColor = true;
-            this.displayAllShowsButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // selectDateLabel
             // 
             this.selectDateLabel.AutoSize = true;
@@ -169,15 +149,145 @@
             this.selectEventLabel.TabIndex = 14;
             this.selectEventLabel.Text = "Select an Event";
             // 
+            // displayAllShowsButton
+            // 
+            this.displayAllShowsButton.Location = new System.Drawing.Point(758, 120);
+            this.displayAllShowsButton.Name = "displayAllShowsButton";
+            this.displayAllShowsButton.Size = new System.Drawing.Size(50, 86);
+            this.displayAllShowsButton.TabIndex = 12;
+            this.displayAllShowsButton.Text = "Display all shows";
+            this.displayAllShowsButton.UseVisualStyleBackColor = true;
+            this.displayAllShowsButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ticketsLabel
+            // 
+            this.ticketsLabel.AutoSize = true;
+            this.ticketsLabel.Location = new System.Drawing.Point(755, 7);
+            this.ticketsLabel.Name = "ticketsLabel";
+            this.ticketsLabel.Size = new System.Drawing.Size(94, 13);
+            this.ticketsLabel.TabIndex = 15;
+            this.ticketsLabel.Text = "Number of Tickets";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1 \t",
+            "2 \t",
+            "3 \t",
+            "4 \t",
+            "5 \t",
+            "6 \t",
+            "7 \t",
+            "8 \t",
+            "9",
+            "10 \t",
+            "11 \t",
+            "12 \t",
+            "13 \t",
+            "14 \t",
+            "15 \t",
+            "16 \t",
+            "17 \t",
+            "18 \t",
+            "19",
+            "20 \t",
+            "21 \t",
+            "22 \t",
+            "23 \t",
+            "24 \t",
+            "25 \t",
+            "26 \t",
+            "27 \t",
+            "28 \t",
+            "29",
+            "30 \t",
+            "31 \t",
+            "32 \t",
+            "33 \t",
+            "34 \t",
+            "35 \t",
+            "36 \t",
+            "37 \t",
+            "38 \t",
+            "39",
+            "40 \t",
+            "41 \t",
+            "42 \t",
+            "43 \t",
+            "44 \t",
+            "45 \t",
+            "46 \t",
+            "47 \t",
+            "48 \t",
+            "49",
+            "50 \t",
+            "51 \t",
+            "52 \t",
+            "53 \t",
+            "54 \t",
+            "55 \t",
+            "56 \t",
+            "57 \t",
+            "58 \t",
+            "59",
+            "60 \t",
+            "61 \t",
+            "62 \t",
+            "63 \t",
+            "64 \t",
+            "65 \t",
+            "66 \t",
+            "67 \t",
+            "68 \t",
+            "69",
+            "70 \t",
+            "71 \t",
+            "72 \t",
+            "73 \t",
+            "74 \t",
+            "75 \t",
+            "76 \t",
+            "77 \t",
+            "78 \t",
+            "79",
+            "80 \t",
+            "81 \t",
+            "82 \t",
+            "83 \t",
+            "84 \t",
+            "85 \t",
+            "86 \t",
+            "87 \t",
+            "88 \t",
+            "89",
+            "90 \t",
+            "91 \t",
+            "92 \t",
+            "93 \t",
+            "94 \t",
+            "95 \t",
+            "96 \t",
+            "97 \t",
+            "98 \t",
+            "99",
+            "100"});
+            this.comboBox1.Location = new System.Drawing.Point(758, 22);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 262);
+            this.Controls.Add(this.ticketsLabel);
             this.Controls.Add(this.displayAllShowsButton);
             this.Controls.Add(this.selectEventLabel);
             this.Controls.Add(this.selectDateLabel);
-            
             this.Controls.Add(this.nameComboBox);
             this.Controls.Add(this.showListBox);
             this.Controls.Add(this.CheckoutButton);
@@ -196,7 +306,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button SeatSelectButton;
         private System.Windows.Forms.Button AdminModeButton;
         private System.Windows.Forms.Button displayAllShowsButton;
@@ -207,5 +316,7 @@
         private System.Windows.Forms.ComboBox nameComboBox;
         private System.Windows.Forms.Label selectDateLabel;
         private System.Windows.Forms.Label selectEventLabel;
+        private System.Windows.Forms.Label ticketsLabel;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
