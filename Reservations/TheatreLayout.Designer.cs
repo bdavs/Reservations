@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(442, 328);
             this.Name = "TheatreLayout";
             this.Text = "TheatreLayout";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TheatreLayout_FormClosing);
             this.Load += new System.EventHandler(this.TheatreLayout_Load);
             this.ResumeLayout(false);
 

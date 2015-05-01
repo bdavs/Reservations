@@ -32,5 +32,10 @@ namespace Reservations
             TheatreLayout TL = new TheatreLayout();
             TL.ShowDialog();
         }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
