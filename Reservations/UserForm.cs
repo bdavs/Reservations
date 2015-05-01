@@ -30,7 +30,7 @@ namespace Reservations
             InitializeComponent();
             showList = Shows.LoadShows();
             listViewSetup();
-
+            displayAllShows();
 
             
             foreach (Shows s in showList)
@@ -40,6 +40,26 @@ namespace Reservations
              
            // ICollection<Shows> test = CollectionViewSource.GetDefaultView(showList);
             
+        }
+        private void displayAllShows()
+        {
+            showListBox.Items.Clear();
+            foreach (Shows s in showList)
+            {
+                ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                showListBox.Items.Add(t);
+
+            }
+            groupTables = new Hashtable[showListBox.Columns.Count];
+            for (int column = 0; column < showListBox.Columns.Count; column++)
+            {
+                // Create a hash table containing all the groups  
+                // needed for a single column.
+                groupTables[column] = CreateGroupsTable(column);
+            }
+            //showListBox_ColumnClick(sender, new ColumnClickEventArgs(0));
+            showListBox.Sorting = SortOrder.Descending;
+            SetGroups(1);
         }
         private void listViewSetup() 
         {
@@ -317,23 +337,7 @@ namespace Reservations
 
         private void button1_Click(object sender, EventArgs e)
         {
-            showListBox.Items.Clear();
-            foreach (Shows s in showList)
-            {
-                ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
-                showListBox.Items.Add(t);
-
-            }
-            groupTables = new Hashtable[showListBox.Columns.Count];
-            for (int column = 0; column < showListBox.Columns.Count; column++)
-            {
-                // Create a hash table containing all the groups  
-                // needed for a single column.
-                groupTables[column] = CreateGroupsTable(column);
-            }
-            //showListBox_ColumnClick(sender, new ColumnClickEventArgs(0));
-            showListBox.Sorting = SortOrder.Descending;
-            SetGroups(1);
+            displayAllShows();
         }
 
     }
