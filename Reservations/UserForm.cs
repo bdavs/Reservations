@@ -163,7 +163,7 @@ namespace Reservations
                     }
                 customerList.Remove(temp);
                 Customer.SaveCustomers(customerList);
-                UAF = new UserAccountForm();//temp.Name, temp.Address, temp.Email, temp.Phone, temp.Size, temp.Credit,"Save Info");
+                UAF = new UserAccountForm(temp.Name, temp.Address, temp.Email, temp.Phone, temp.Size, temp.Credit,"Save Info");
             }
             UAF.Refresh();
             UAF.Show();
