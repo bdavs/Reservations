@@ -12,20 +12,22 @@ namespace Reservations
 {
     public partial class UserAccountForm : Form
     {
+        public int tempIndex;
+ 
         public UserAccountForm()
         {
             InitializeComponent();
         }
-        public UserAccountForm(string n, string a, string e, string p, int f, string c, string s)
+        public UserAccountForm(Customer c)
         {
             InitializeComponent();
-            nameBox.Text = n;
-            addressBox.Text = a;
-            emailBox.Text = e;
-            phoneNumberBox.Text = p;
-            familySizeBox.Text = f.ToString();
-            creditCardBox.Text = c;
-            CreateUserButton.Text = s;
+            nameBox.Text = c.Name;
+            addressBox.Text = c.Address;
+            emailBox.Text = c.Email;
+            phoneNumberBox.Text = c.Phone;
+            familySizeBox.Text = c.Size.ToString();
+            creditCardBox.Text = c.Credit;
+            CreateUserButton.Text = "Save Info";
         }
 
         private void CreateUserButton_Click(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace Reservations
             {
                 Customer cumstomertemp = new Customer(this.nameBox.Text, this.addressBox.Text, this.phoneNumberBox.Text, this.creditCardBox.Text, this.emailBox.Text, int.Parse(this.familySizeBox.Text));
                 List<Customer> templist = Customer.LoadCustomers();
+                templist.RemoveAt(tempIndex);
                 templist.Add(cumstomertemp);
                 Customer.SaveCustomers(templist);
                 this.Close();
