@@ -40,6 +40,8 @@
             this.showListBox = new System.Windows.Forms.ListView();
             this.nameComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.selectDateLabel = new System.Windows.Forms.Label();
+            this.selectEventLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -115,10 +117,10 @@
             listViewGroup1,
             listViewGroup2,
             listViewGroup3});
-            this.showListBox.Location = new System.Drawing.Point(250, 11);
+            this.showListBox.Location = new System.Drawing.Point(250, 22);
             this.showListBox.Margin = new System.Windows.Forms.Padding(2);
             this.showListBox.Name = "showListBox";
-            this.showListBox.Size = new System.Drawing.Size(504, 240);
+            this.showListBox.Size = new System.Drawing.Size(504, 229);
             this.showListBox.TabIndex = 11;
             this.showListBox.UseCompatibleStateImageBehavior = false;
             this.showListBox.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.showListBox_ColumnClick);
@@ -148,11 +150,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // selectDateLabel
+            // 
+            this.selectDateLabel.AutoSize = true;
+            this.selectDateLabel.Location = new System.Drawing.Point(13, 31);
+            this.selectDateLabel.Name = "selectDateLabel";
+            this.selectDateLabel.Size = new System.Drawing.Size(70, 13);
+            this.selectDateLabel.TabIndex = 13;
+            this.selectDateLabel.Text = "Select a date";
+            // 
+            // selectEventLabel
+            // 
+            this.selectEventLabel.AutoSize = true;
+            this.selectEventLabel.Location = new System.Drawing.Point(250, 8);
+            this.selectEventLabel.Name = "selectEventLabel";
+            this.selectEventLabel.Size = new System.Drawing.Size(83, 13);
+            this.selectEventLabel.TabIndex = 14;
+            this.selectEventLabel.Text = "Select an Event";
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 262);
+            this.Controls.Add(this.selectEventLabel);
+            this.Controls.Add(this.selectDateLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nameComboBox);
             this.Controls.Add(this.showListBox);
@@ -166,6 +188,7 @@
             this.Text = "Reservations";
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,5 +203,7 @@
         private System.Windows.Forms.Button CheckoutButton;
         private System.Windows.Forms.ListView showListBox;
         private System.Windows.Forms.ComboBox nameComboBox;
+        private System.Windows.Forms.Label selectDateLabel;
+        private System.Windows.Forms.Label selectEventLabel;
     }
 }
