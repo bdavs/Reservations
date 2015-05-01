@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<ArrayOfShows xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Shows>
+    <Name>A Midsummer Night's Scream</Name>
+    <Date>2015-05-05T19:00:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>14.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>Dog on a Cold Copper Floor</Name>
+    <Date>2015-05-20T15:00:00</Date>
+    <Venue>
+      <Name>Ford Theater</Name>
+      <Size>200</Size>
+      <Seats_Available>200</Seats_Available>
+    </Venue>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>A Grape in the Moonlight</Name>
+    <Date>2015-06-03T21:00:00</Date>
+    <Venue>
+      <Name>Huntington Theater</Name>
+      <Size>400</Size>
+      <Seats_Available>400</Seats_Available>
+    </Venue>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>A Lawn Bike Named Apathy</Name>
+    <Date>2015-06-15T12:30:00</Date>
+    <Venue>
+      <Name>Ford Theater</Name>
+      <Size>200</Size>
+      <Seats_Available>200</Seats_Available>
+    </Venue>
+    <Price>14.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>For White Girls Who Have Considered Patricide When the Tortise Is Enuf</Name>
+    <Date>2015-06-25T18:30:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>An Action Figure's Mansion</Name>
+    <Date>2015-07-01T10:00:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>14.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>Bromeo and Griliet</Name>
+    <Date>2015-07-12T17:30:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>The Insignifigance of Abstaining Indifference</Name>
+    <Date>2015-07-25T15:30:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>Birth of a Customer</Name>
+    <Date>2015-08-03T03:45:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>4.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>Birth of a Customer</Name>
+    <Date>2015-08-03T03:45:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>4.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>An Imperfect Wife</Name>
+    <Date>2015-08-14T16:30:00</Date>
+    <Venue>
+      <Name>Globe Theater</Name>
+      <Size>300</Size>
+      <Seats_Available>300</Seats_Available>
+    </Venue>
+    <Price>14.99</Price>
+    <Available>true</Available>
+  </Shows>
+</ArrayOfShows>

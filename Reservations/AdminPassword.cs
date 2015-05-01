@@ -15,6 +15,7 @@ namespace Reservations
         public AdminPassword()
         {
             InitializeComponent();
+            AdminPasswordEnter.Focus();
         }
 
         private void AdminPasswordBox_Enter(object sender, EventArgs e)
@@ -31,6 +32,30 @@ namespace Reservations
                 this.Close();       
             }
 
+        }
+
+        private void AdminPassword_Load(object sender, EventArgs e)
+        {
+            AdminPasswordEnter.Focus();
+        }
+
+        private void AdminPasswordBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AdminPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void AdminPasswordBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                AdminPasswordEnter_Click(sender,e);
+                
+            }
         }
     }
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfVenue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Venue>
+    <Name>Globe Theater</Name>
+    <Size>300</Size>
+    <Seats_Available>300</Seats_Available>
+  </Venue>
+  <Venue>
+    <Name>Ford Theater</Name>
+    <Size>200</Size>
+    <Seats_Available>200</Seats_Available>
+  </Venue>
+  <Venue>
+    <Name>Huntington Theater</Name>
+    <Size>400</Size>
+    <Seats_Available>400</Seats_Available>
+  </Venue>
+</ArrayOfVenue>

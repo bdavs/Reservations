@@ -63,6 +63,7 @@
     <Compile Include="AdminPassword.Designer.cs">
       <DependentUpon>AdminPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeatForm.cs">
@@ -71,6 +72,7 @@
     <Compile Include="SeatForm.Designer.cs">
       <DependentUpon>SeatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shows.cs" />
     <Compile Include="ShowTime.cs" />
     <Compile Include="TheatreForm.cs">
       <SubType>Form</SubType>
@@ -84,12 +86,19 @@
     <Compile Include="TheatreLayout.Designer.cs">
       <DependentUpon>TheatreLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountForm.Designer.cs">
+      <DependentUpon>UserAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venue.cs" />
     <EmbeddedResource Include="AdminEditUserForm.resx">
       <DependentUpon>AdminEditUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +126,9 @@
     <EmbeddedResource Include="TheatreLayout.resx">
       <DependentUpon>TheatreLayout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserAccountForm.resx">
+      <DependentUpon>UserAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,7 +146,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="customers.xml" />
+    <Content Include="shows.xml" />
     <Content Include="showtimes.xml" />
+    <Content Include="venues.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
