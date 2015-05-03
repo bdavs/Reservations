@@ -324,10 +324,17 @@ namespace Reservations
 
         private void nameComboBox_TextChanged(object sender, EventArgs e)
         {
+            List<Customer> temp = Customer.LoadCustomers();
+            Customer tc=new Customer();
             foreach (string s in nameComboBox.Items)
                 if (s == nameComboBox.Text)
                 {
-                    CreateNewUserButton.Text = "Edit Info"; break;
+                    foreach(Customer c in temp)
+                        if(c.Name==s)
+                            tc=c;
+                    CreateNewUserButton.Text = "Edit Info";
+                    ticketsComboBox.SelectedIndex = tc.Size-1;
+                    break;
                 }
                 else
                     CreateNewUserButton.Text = "Or Create New User";
