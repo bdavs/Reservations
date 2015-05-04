@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Customer>
-    <Name>Edward Albee</Name>
-    <Address>Somewhere in Virginia</Address>
-    <Phone>3334445555</Phone>
-    <Credit>1234567887654321</Credit>
-    <Email>12yogay@yahoo.com</Email>
-    <Size>5</Size>
-  </Customer>
-  <Customer>
     <Name>Pompus White Guy</Name>
     <Address>Practically Everywhere</Address>
     <Phone>3456547753</Phone>
@@ -39,5 +31,13 @@
     <Credit>8008-8008-8008-8008</Credit>
     <Email>thepinkguy@pinkeye.com</Email>
     <Size>23</Size>
+  </Customer>
+  <Customer>
+    <Name>Pompus White Gu</Name>
+    <Address>Practically Everywhere</Address>
+    <Phone>(345) 654-7753</Phone>
+    <Credit>1222-5555-6767-8221</Credit>
+    <Email>yourwrong@lifeisabitch.org</Email>
+    <Size>1</Size>
   </Customer>
 </ArrayOfCustomer>

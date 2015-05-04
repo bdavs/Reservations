@@ -85,5 +85,20 @@ namespace Reservations
             }
 
         }
+
+        private void editEventButton_Click(object sender, EventArgs e)
+        {
+            if (editEventButton.Text == "Edit User")
+            {
+                List<Customer> cutomerList = Customer.LoadCustomers();
+                Customer temp = new Customer();
+                foreach(Customer c in customerList)
+                {
+                    if (c == UserList.SelectedItem) temp = c;
+                }
+                UserAccountForm UAF = new UserAccountForm(temp);
+                UAF.Show();
+            }
+        }
     }
 }

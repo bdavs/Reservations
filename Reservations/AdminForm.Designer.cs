@@ -116,6 +116,7 @@
             this.editEventButton.TabIndex = 15;
             this.editEventButton.Text = "Edit Event";
             this.editEventButton.UseVisualStyleBackColor = true;
+            this.editEventButton.Click += new System.EventHandler(this.editEventButton_Click);
             // 
             // ViewUserButton
             // 
