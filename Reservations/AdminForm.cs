@@ -12,18 +12,17 @@ namespace Reservations
 {
     public partial class AdminForm : Form
     {
-        List<Customer> customerList;
-        List<Shows> showList;
         public AdminForm()
         {
             InitializeComponent();
-            showList = Shows.LoadShows();
-            customerList = Customer.LoadCustomers();
+            UserForm.showList = Shows.LoadShows();
+            UserForm.customerList = Customer.LoadCustomers();
             UserList.Items.Clear();
-            foreach (Shows s in showList)
+            foreach (Shows s in UserForm.showList)
                 UserList.Items.Add(s);
             UserList.DisplayMember = "Name";
             UserList.Sorted = true;
+            editEventButton.Enabled = false;
         }
 
         private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
@@ -55,6 +54,7 @@ namespace Reservations
 
         private void ViewUserButton_Click(object sender, EventArgs e)
         {
+            editEventButton.Enabled = false;
             if (ViewUserButton.Text == "View All Users")
             {
                 UserLabel.Text = "Users";
@@ -62,7 +62,7 @@ namespace Reservations
                 addEventButtons.Text = "Add User(s)";
                 ViewUserButton.Text = "View All Events";
                 UserList.Items.Clear();
-                foreach (Customer dude in customerList)
+                foreach (Customer dude in UserForm.customerList)
                 {
                     UserList.Items.Add(dude);
                 }
@@ -76,7 +76,7 @@ namespace Reservations
                 addEventButtons.Text = "Add Event(s)";
                 ViewUserButton.Text = "View All Users";
                 UserList.Items.Clear();
-                foreach (Shows dude in showList)
+                foreach (Shows dude in UserForm.showList)
                 {
                     UserList.Items.Add(dude);
                 }
@@ -90,15 +90,21 @@ namespace Reservations
         {
             if (editEventButton.Text == "Edit User")
             {
-                List<Customer> cutomerList = Customer.LoadCustomers();
+                UserForm.customerList = Customer.LoadCustomers();
                 Customer temp = new Customer();
-                foreach(Customer c in customerList)
+                foreach(Customer c in UserForm.customerList)
                 {
-                    if (c == UserList.SelectedItem) temp = c;
+                    if (c == UserList.SelectedItem) temp = c;   //WTF why dis no work???
                 }
                 UserAccountForm UAF = new UserAccountForm(temp);
+                UAF.tempIndex = UserForm.customerList.IndexOf(temp);
                 UAF.Show();
             }
+        }
+
+        private void UserList_Click(object sender, EventArgs e)
+        {
+            editEventButton.Enabled = true;
         }
     }
 }

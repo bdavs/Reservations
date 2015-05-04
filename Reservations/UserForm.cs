@@ -21,14 +21,15 @@ namespace Reservations
         // Declare a variable to store the current grouping column. 
         int groupColumn = 0;
 
-        public List<Shows> showList;
-        public List<Customer> customerList;
+        public static List<Shows> showList;
+        public static List<Customer> customerList;
         public UserForm()
         {
 
             
             InitializeComponent();
             showList = Shows.LoadShows();
+            customerList = Customer.LoadCustomers();
             listViewSetup();
             displayAllShows();
 
@@ -179,7 +180,6 @@ namespace Reservations
                     {
                         temp = c;
                     }
-                Customer.SaveCustomers(customerList);
                 UAF = new UserAccountForm(temp);
                 UAF.tempIndex = customerList.IndexOf(temp);
             }
