@@ -53,6 +53,7 @@
             this.UserList.Name = "UserList";
             this.UserList.Size = new System.Drawing.Size(234, 160);
             this.UserList.TabIndex = 9;
+            this.UserList.Click += new System.EventHandler(this.UserList_Click);
             this.UserList.SelectedIndexChanged += new System.EventHandler(this.UserList_SelectedIndexChanged);
             // 
             // DateLabel
