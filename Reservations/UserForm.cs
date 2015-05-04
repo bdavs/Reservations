@@ -140,6 +140,16 @@ namespace Reservations
         {
             //SeatForm SF = new SeatForm();
             //SF.Showdialog();
+            Shows showTemp = new Shows();
+            try
+            {
+                showTemp = showList.Find(item => item.Name == showListBox.SelectedItems[0].Text.ToString());
+            }
+            catch (Exception ex)
+            {
+                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                    showTemp = new Shows();//this.Text = "NOOOOPE";
+            }
             TheatreForm TF = new TheatreForm();
             TF.ShowDialog();
         }
