@@ -188,6 +188,8 @@ namespace Reservations
                 UAF = new UserAccountForm(temp);
                 UAF.tempIndex = customerList.IndexOf(temp);
             }
+            
+            
             UAF.Refresh();
             UAF.Show();
         }

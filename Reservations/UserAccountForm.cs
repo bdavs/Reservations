@@ -12,6 +12,8 @@ namespace Reservations
 {
     public partial class UserAccountForm : Form
     {
+
+        List<Customer> templist = Customer.LoadCustomers();
         public int tempIndex;
  
         public UserAccountForm()
@@ -28,6 +30,7 @@ namespace Reservations
             familySizeBox.Text = c.Size.ToString();
             creditCardBox.Text = c.Credit;
             CreateUserButton.Text = "Save Info";
+            tempIndex = templist.FindIndex(i => i.Name == c.Name);
         }
 
         private void CreateUserButton_Click(object sender, EventArgs e)
@@ -39,7 +42,9 @@ namespace Reservations
                 templist.RemoveAt(tempIndex);
                 templist.Add(cumstomertemp);
                 Customer.SaveCustomers(templist);
+                
                 this.Close();
+                 
             }
             catch (FormatException) { MessageBox.Show("Please Complete All Fields", "Field Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             

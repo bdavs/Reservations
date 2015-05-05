@@ -107,11 +107,21 @@ namespace Reservations
                     if (c == UserList.SelectedItem) temp = c;   //WTF why dis no work???
                 }*/
                 UserAccountForm UAF = new UserAccountForm(selectedCustomer);//dis now work
-                UAF.tempIndex = UserForm.customerList.IndexOf(selectedCustomer);
+                //UAF.tempIndex = UserForm.customerList.IndexOf(selectedCustomer);
+                UAF.Closed += new EventHandler(RefreshData);
+                
                 UAF.Show();
+                
             }
         }
-
+        private void RefreshData(object sender, EventArgs e)
+        {
+            UserForm.customerList = Customer.LoadCustomers();
+            UserList.Items.Clear();
+            foreach (Customer c in UserForm.customerList)
+                UserList.Items.Add(c);
+            this.Refresh();
+        }
         private void UserList_Click(object sender, EventArgs e)
         {
             editEventButton.Enabled = true;

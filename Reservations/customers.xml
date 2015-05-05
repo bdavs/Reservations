@@ -17,19 +17,19 @@
     <Size>5</Size>
   </Customer>
   <Customer>
-    <Name>Pompus White Guy</Name>
-    <Address>Practically Everywhere</Address>
-    <Phone>3456547753</Phone>
-    <Credit>1222555567678221</Credit>
-    <Email>yourwrong@lifeisabitch.org</Email>
-    <Size>1</Size>
-  </Customer>
-  <Customer>
     <Name>Oscar Wilder</Name>
     <Address>Père Lachaise Cemetery, France</Address>
     <Phone>(134) 545-6782</Phone>
     <Credit>2345-6789-0123-4567</Credit>
     <Email>gonewilder@comcast.net</Email>
     <Size>3</Size>
+  </Customer>
+  <Customer>
+    <Name>Pompus White Guyz</Name>
+    <Address>Practically Everywhere</Address>
+    <Phone>(345) 654-7753</Phone>
+    <Credit>1222-5555-6767-8221</Credit>
+    <Email>yourwrong@lifeisabitch.org</Email>
+    <Size>1</Size>
   </Customer>
 </ArrayOfCustomer>

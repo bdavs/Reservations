@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
             this.CreateNewUserButton = new System.Windows.Forms.Button();
@@ -98,16 +98,16 @@
             // 
             // showListBox
             // 
-            listViewGroup4.Header = "Show";
-            listViewGroup4.Name = "showGroup";
-            listViewGroup5.Header = "Venue";
-            listViewGroup5.Name = "venueGroup";
-            listViewGroup6.Header = "Time";
-            listViewGroup6.Name = "timeGroup";
+            listViewGroup7.Header = "Show";
+            listViewGroup7.Name = "showGroup";
+            listViewGroup8.Header = "Venue";
+            listViewGroup8.Name = "venueGroup";
+            listViewGroup9.Header = "Time";
+            listViewGroup9.Name = "timeGroup";
             this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
             this.showListBox.Location = new System.Drawing.Point(250, 22);
             this.showListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showListBox.Name = "showListBox";
@@ -301,6 +301,7 @@
             this.Controls.Add(this.AdminModeButton);
             this.Controls.Add(this.SeatSelectButton);
             this.Controls.Add(this.ticketsComboBox);
+            this.MaximizeBox = false;
             this.Name = "UserForm";
             this.Text = "Reservations";
             this.Load += new System.EventHandler(this.UserForm_Load);
