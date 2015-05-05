@@ -23,6 +23,9 @@ namespace Reservations
 
         public static List<Shows> showList;
         public static List<Customer> customerList;
+        Shows selectedShow = new Shows();
+        int tickets=0;
+
         public UserForm()
         {
 
@@ -32,7 +35,7 @@ namespace Reservations
             customerList = Customer.LoadCustomers();
             listViewSetup();
             displayAllShows();
-
+            CheckoutButton.Enabled = false;
             
             foreach (Shows s in showList)
             {
@@ -62,6 +65,7 @@ namespace Reservations
             showListBox.Sorting = SortOrder.Descending;
             SetGroups(1);
         }
+
         private void listViewSetup() 
         {
             //showListBox.Dock = DockStyle.Fill;
@@ -141,16 +145,7 @@ namespace Reservations
         {
             //SeatForm SF = new SeatForm();
             //SF.Showdialog();
-            Shows showTemp = new Shows();
-            try
-            {
-                showTemp = showList.Find(item => item.Name == showListBox.SelectedItems[0].Text.ToString());
-            }
-            catch (Exception ex)
-            {
-                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
-                    showTemp = new Shows();//this.Text = "NOOOOPE";
-            }
+ 
             TheatreForm TF = new TheatreForm();
             TF.ShowDialog();
         }
@@ -199,13 +194,12 @@ namespace Reservations
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Your tickets will arrive soon.\nThank you", "Form Submit", MessageBoxButtons.OK);
-
-            if (result == System.Windows.Forms.DialogResult.Yes)
+            var result = MessageBox.Show("You have placed an order for " + tickets + " tickets for \""+selectedShow.Name.ToString() + "\"\nOn "
+                + selectedShow.Date.ToLongDateString()+" "+selectedShow.Date.ToLongTimeString(), "Form Submit", MessageBoxButtons.OK);
+            
+            if (result == System.Windows.Forms.DialogResult.OK)
             {
-
                 // Closes the parent form. 
-
                 this.Close();
             }
 
@@ -355,6 +349,28 @@ namespace Reservations
         private void button1_Click(object sender, EventArgs e)
         {
             displayAllShows();
+        }
+
+        private void showListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                selectedShow = showList.Find(item => item.Name == showListBox.SelectedItems[0].Text.ToString());
+            }
+            catch (Exception ex)
+            {
+                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                    selectedShow = new Shows();
+            }
+            if(tickets>0)
+                CheckoutButton.Enabled = true;
+        }
+
+        private void ticketsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tickets = Int32.Parse(ticketsComboBox.SelectedItem.ToString());
+            if(selectedShow.Name!=null)
+                CheckoutButton.Enabled = true;
         }
 
     }

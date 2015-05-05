@@ -12,6 +12,7 @@ namespace Reservations
 {
     public partial class AdminForm : Form
     {
+        Customer selectedCustomer = new Customer();
         public AdminForm()
         {
             InitializeComponent();
@@ -33,6 +34,15 @@ namespace Reservations
         private void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            try
+            {
+                selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
+            }
+            catch (Exception ex)
+            {
+                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                      selectedCustomer = new Customer();
+            }
         }
 
         private void EditUserButton_Click(object sender, EventArgs e)
@@ -91,13 +101,13 @@ namespace Reservations
             if (editEventButton.Text == "Edit User")
             {
                 UserForm.customerList = Customer.LoadCustomers();
-                Customer temp = new Customer();
-                foreach(Customer c in UserForm.customerList)
+                //Customer temp = new Customer();
+                /*foreach(Customer c in UserForm.customerList)
                 {
                     if (c == UserList.SelectedItem) temp = c;   //WTF why dis no work???
-                }
-                UserAccountForm UAF = new UserAccountForm(temp);
-                UAF.tempIndex = UserForm.customerList.IndexOf(temp);
+                }*/
+                UserAccountForm UAF = new UserAccountForm(selectedCustomer);//dis now work
+                UAF.tempIndex = UserForm.customerList.IndexOf(selectedCustomer);
                 UAF.Show();
             }
         }
