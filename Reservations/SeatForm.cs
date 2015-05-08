@@ -16,7 +16,7 @@ namespace Reservations
         public Customer currentCustomer = new Customer();
         public Shows currentShow = new Shows();
         public List<Venue> venueList = Venue.LoadVenues();
-        public Venue currentVenue = new Venue();
+        public Venue currentVenue = new Venue(); 
         public SeatForm()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace Reservations
             {
                 if (q.Name == currentShow.VenueName)
                     currentVenue = q;
-            }
+        }
             CreateButtons();
         }
 
