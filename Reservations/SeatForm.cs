@@ -15,7 +15,8 @@ namespace Reservations
         public Button[] buttonArray = new Button[1000];
         public Customer currentCustomer = new Customer();
         public Shows currentShow = new Shows();
-        public Venue currentVenue = new Venue(); 
+        public List<Venue> venueList = Venue.LoadVenues();
+        public Venue currentVenue = new Venue();
         public SeatForm()
         {
             InitializeComponent();
@@ -25,7 +26,12 @@ namespace Reservations
         {
             currentCustomer = UserForm.selectedCustomer;
             currentShow = UserForm.selectedShow;
-            currentVenue = currentShow.Venue;
+            foreach (Venue q in venueList)
+            {
+                if (q.Name == currentShow.VenueName)
+                    currentVenue = q;
+            }
+            CreateButtons();
         }
 
         private void CreateButtons()
@@ -41,20 +47,13 @@ namespace Reservations
                 int i = 0;
                 buttonArray[i] = new Button();
                 buttonArray[i].Size = new Size(15, 15);
-                buttonArray[i].Location = new Point(horizontal, vertical);
+                buttonArray[i].Location = q;
                 buttonArray[i].Text = i.ToString();//rowDesignation + seatDesignation.ToString();
                 //buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
                 buttonArray[i].Tag = i;
                 this.Controls.Add(buttonArray[i]);
-            }
-
-            for (int i = 0; i < buttonArray.Length; i++)
-            {
-
-                rowDesignation = rowLetterString[i / 40];
-                seatDesignation = (i % 40) + 1;
-                
+                i++;
             }
         }
 
