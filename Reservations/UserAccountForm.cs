@@ -15,7 +15,7 @@ namespace Reservations
 
         List<Customer> templist = Customer.LoadCustomers();
         public int tempIndex;
- 
+        public Customer selectedCustomer;
         public UserAccountForm()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace Reservations
             creditCardBox.Text = c.Credit;
             CreateUserButton.Text = "Save Info";
             removeButton.Visible = a;
+            selectedCustomer = c;
             if (a)
                 CreateUserButton.Location = new Point(30, 270);
             else
@@ -47,6 +48,7 @@ namespace Reservations
             try
             {
                 Customer cumstomertemp = new Customer(this.nameBox.Text, this.addressBox.Text, this.phoneNumberBox.Text, this.creditCardBox.Text, this.emailBox.Text, int.Parse(this.familySizeBox.Text));
+                cumstomertemp.Tickets = selectedCustomer.Tickets;
                 List<Customer> templist = Customer.LoadCustomers();
                 if(tempIndex !=-1) templist.RemoveAt(tempIndex);
                 templist.Add(cumstomertemp);
