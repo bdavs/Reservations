@@ -34,7 +34,7 @@ namespace Reservations
             priceBox.Text = s.Price.ToString();
             venueComboBox.SelectedItem = s.VenueName;
             Schedule.Value = s.Date;
-            oldIndex = UserForm.showList.FindIndex(i => i == s);
+            oldIndex = UserForm.showList.FindIndex(i => i.Name == s.Name);
         }
 
         private void nameBox_TextChanged(object sender, EventArgs e)
