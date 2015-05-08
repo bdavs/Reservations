@@ -14,15 +14,27 @@ namespace Reservations
     {
         public Button[] buttonArray = new Button[1000];
         public List<Point>seats = new List<Point>();
+        public Venue tempVenue = new Venue();
         public string name1;
         public int number1;
-        int oldIndex;
+        int oldIndex=-1;
         public TheatreLayout(Venue currentVenue)
         {
             InitializeComponent();
+            tempVenue = currentVenue;
             name1 = currentVenue.Name;
             number1 = currentVenue.Size;
             oldIndex = TheatreForm.venueList.FindIndex(i => i == currentVenue);
+            this.WindowState = FormWindowState.Maximized;
+
+        }
+        public TheatreLayout(string name, int size)//new layout
+        {
+            InitializeComponent();
+            name1 = name;
+            number1 = size;
+            oldIndex = -1;
+            tempVenue = new Venue(name, size, size, new List<Point>(1), new List<Point>(1));
             this.WindowState = FormWindowState.Maximized;
 
         }
@@ -73,6 +85,12 @@ namespace Reservations
                 buttonArray[i].Text = rowDesignation + seatDesignation.ToString();
                 buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
+                bool taken = tempVenue.Seat_Location.Exists(g => g == buttonArray[i].Location);
+                bool taken2 = tempVenue.Seats_Taken.Exists(g => g == buttonArray[i].Location);
+                if (taken == true)
+                    buttonArray[i].BackColor = Color.Red;
+                if (taken2 == true)
+                    buttonArray[i].BackColor = Color.Purple;
                 buttonArray[i].Tag = i;
                 if ((i + 1) % 40 == 0)
                 {
@@ -116,7 +134,8 @@ namespace Reservations
             Venue temp = new Venue(name1,number1,number1,seats);
             List<Venue> newVenue = new List<Venue>();
             newVenue = Venue.LoadVenues();
-            newVenue[oldIndex] = temp;
+            if (oldIndex != -1) newVenue[oldIndex] = temp;
+            else newVenue.Add(temp);
             Venue.SaveVenues(newVenue);
         }
     }

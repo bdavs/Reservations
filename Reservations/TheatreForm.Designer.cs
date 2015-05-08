@@ -34,12 +34,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.TheatreList = new System.Windows.Forms.ListBox();
+            this.newTheatreButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(44, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(168, 20);
             this.textBox1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(118, 201);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 33);
@@ -68,7 +69,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(320, 196);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 60);
             this.button1.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             this.save.Enabled = false;
             this.save.Location = new System.Drawing.Point(230, 196);
-            this.save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.save.Margin = new System.Windows.Forms.Padding(2);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(73, 60);
             this.save.TabIndex = 4;
@@ -97,18 +98,29 @@
             this.TheatreList.TabIndex = 10;
             this.TheatreList.SelectedIndexChanged += new System.EventHandler(this.TheatreList_SelectedIndexChanged);
             // 
+            // newTheatreButton
+            // 
+            this.newTheatreButton.Location = new System.Drawing.Point(44, 113);
+            this.newTheatreButton.Name = "newTheatreButton";
+            this.newTheatreButton.Size = new System.Drawing.Size(126, 23);
+            this.newTheatreButton.TabIndex = 11;
+            this.newTheatreButton.Text = "Add New Theatre";
+            this.newTheatreButton.UseVisualStyleBackColor = true;
+            this.newTheatreButton.Click += new System.EventHandler(this.newTheatreButton_Click);
+            // 
             // TheatreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 321);
+            this.Controls.Add(this.newTheatreButton);
             this.Controls.Add(this.TheatreList);
             this.Controls.Add(this.save);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TheatreForm";
             this.Load += new System.EventHandler(this.TheatreForm_Load);
             this.ResumeLayout(false);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.ListBox TheatreList;
+        private System.Windows.Forms.Button newTheatreButton;
     }
 }
