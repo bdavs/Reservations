@@ -95,6 +95,7 @@
             this.TheatreList.Name = "TheatreList";
             this.TheatreList.Size = new System.Drawing.Size(234, 160);
             this.TheatreList.TabIndex = 10;
+            this.TheatreList.SelectedIndexChanged += new System.EventHandler(this.TheatreList_SelectedIndexChanged);
             // 
             // TheatreForm
             // 

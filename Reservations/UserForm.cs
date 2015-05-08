@@ -343,7 +343,8 @@ namespace Reservations
                 }
                 else
                     CreateNewUserButton.Text = "Or Create New User";
-            if (customerList.Exists(i => i.Name == selectedCustomer.Name)) ;
+            if ((selectedShow.Name != null) && (tickets > 0))
+                CheckoutButton.Enabled = true;
 
         }
 
@@ -363,14 +364,14 @@ namespace Reservations
                 if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
                     selectedShow = new Shows();
             }
-            if(tickets>0)
+            if ((tickets > 0) && (selectedCustomer.Name != null))
                 CheckoutButton.Enabled = true;
         }
 
         private void ticketsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             tickets = Int32.Parse(ticketsComboBox.SelectedItem.ToString());
-            if(selectedShow.Name!=null)
+            if((selectedShow.Name!=null)&&(selectedCustomer.Name !=null))
                 CheckoutButton.Enabled = true;
         }
 
