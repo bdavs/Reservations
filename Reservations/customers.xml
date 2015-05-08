@@ -28,15 +28,6 @@
     <Tickets />
   </Customer>
   <Customer>
-    <Name>Keegan</Name>
-    <Address>Keegan Way</Address>
-    <Phone>(555) 555-5555</Phone>
-    <Credit>5555-5555-5555-5555</Credit>
-    <Email>klarue</Email>
-    <Size>3</Size>
-    <Tickets />
-  </Customer>
-  <Customer>
     <Name>Miles Tails Per Hour</Name>
     <Address>Oh God No</Address>
     <Phone>(897) 590-7473</Phone>
@@ -44,5 +35,75 @@
     <Email>He'sShowingUpUninvited.jpg</Email>
     <Size>100</Size>
     <Tickets />
+  </Customer>
+  <Customer>
+    <Name>Keegan</Name>
+    <Address>Keegan Way</Address>
+    <Phone>(555) 555-5555</Phone>
+    <Credit>5555-5555-5555-5555</Credit>
+    <Email>klarue</Email>
+    <Size>3</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>13</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>12</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>11</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>9</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>10</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Dog on a Cold Copper Floor</Name>
+          <Date>2015-05-20T15:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>9</SeatNumber>
+      </Ticket>
+    </Tickets>
   </Customer>
 </ArrayOfCustomer>
