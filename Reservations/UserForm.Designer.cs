@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Show", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Venue", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.SeatSelectButton = new System.Windows.Forms.Button();
             this.AdminModeButton = new System.Windows.Forms.Button();
             this.CreateNewUserButton = new System.Windows.Forms.Button();
@@ -98,16 +98,16 @@
             // 
             // showListBox
             // 
-            listViewGroup4.Header = "Show";
-            listViewGroup4.Name = "showGroup";
-            listViewGroup5.Header = "Venue";
-            listViewGroup5.Name = "venueGroup";
-            listViewGroup6.Header = "Time";
-            listViewGroup6.Name = "timeGroup";
+            listViewGroup1.Header = "Show";
+            listViewGroup1.Name = "showGroup";
+            listViewGroup2.Header = "Venue";
+            listViewGroup2.Name = "venueGroup";
+            listViewGroup3.Header = "Time";
+            listViewGroup3.Name = "timeGroup";
             this.showListBox.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.showListBox.Location = new System.Drawing.Point(250, 22);
             this.showListBox.Margin = new System.Windows.Forms.Padding(2);
             this.showListBox.Name = "showListBox";
@@ -129,6 +129,7 @@
             this.nameComboBox.Sorted = true;
             this.nameComboBox.TabIndex = 12;
             this.nameComboBox.Text = "Enter Name";
+            this.nameComboBox.SelectedIndexChanged += new System.EventHandler(this.nameComboBox_SelectedIndexChanged);
             this.nameComboBox.TextChanged += new System.EventHandler(this.nameComboBox_TextChanged);
             this.nameComboBox.Enter += new System.EventHandler(this.nameComboBox_Enter);
             // 

@@ -17,13 +17,15 @@ namespace Reservations
     public partial class UserForm : Form
     {
 
+        
         private Hashtable[] groupTables;
         // Declare a variable to store the current grouping column. 
         int groupColumn = 0;
 
         public static List<Shows> showList;
         public static List<Customer> customerList;
-        Shows selectedShow = new Shows();
+        public static  Shows selectedShow = new Shows();
+        public static Customer selectedCustomer = new Customer();
         int tickets=0;
 
         public UserForm()
@@ -179,14 +181,14 @@ namespace Reservations
             if (CreateNewUserButton.Text == "Edit Info")
             {
                 customerList = Customer.LoadCustomers();
-                Customer temp = new Customer();
+                
                 foreach (Customer c in customerList)
                     if (c.Name == nameComboBox.Text)
                     {
-                        temp = c;
+                        selectedCustomer = c;
                     }
-                UAF = new UserAccountForm(temp);
-                UAF.tempIndex = customerList.IndexOf(temp);
+                UAF = new UserAccountForm(selectedCustomer);
+                UAF.tempIndex = customerList.IndexOf(selectedCustomer);
             }
             
             
@@ -331,20 +333,20 @@ namespace Reservations
         private void nameComboBox_TextChanged(object sender, EventArgs e)
         {
             List<Customer> temp = Customer.LoadCustomers();
-            Customer tc=new Customer();
+           // Customer tc=new Customer();
             foreach (string s in nameComboBox.Items)
                 if (s == nameComboBox.Text)
                 {
                     foreach(Customer c in temp)
                         if(c.Name==s)
-                            tc=c;
+                            selectedCustomer=c;
                     CreateNewUserButton.Text = "Edit Info";
-                    ticketsComboBox.SelectedIndex = tc.Size-1;
+                    ticketsComboBox.SelectedIndex = selectedCustomer.Size - 1;
                     break;
                 }
                 else
                     CreateNewUserButton.Text = "Or Create New User";
-            if(customerList.Exists(i=> i.Name == tc.Name));
+            if (customerList.Exists(i => i.Name == selectedCustomer.Name)) ;
 
         }
 
@@ -373,6 +375,11 @@ namespace Reservations
             tickets = Int32.Parse(ticketsComboBox.SelectedItem.ToString());
             if(selectedShow.Name!=null)
                 CheckoutButton.Enabled = true;
+        }
+
+        private void nameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

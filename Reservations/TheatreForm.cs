@@ -15,6 +15,15 @@ namespace Reservations
         public TheatreForm()
         {
             InitializeComponent();
+           /* TheatreList = Venue.LoadVenues();
+           UserForm.showList.
+            TheatreList.Items.Clear();
+            foreach (Shows s in UserForm.showList)
+                TheatreList.Items.Add(s);
+            TheatreList.DisplayMember = "Name";
+            TheatreList.Sorted = true;
+            editEventButton.Enabled = false;*/
+            //UserForm.selectCustomer.
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
