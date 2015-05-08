@@ -8,7 +8,7 @@ using System.IO;
 
 namespace Reservations
 {
-    class Ticket
+    public class Ticket
     {
         private Shows show;
         private int seatnumber;
