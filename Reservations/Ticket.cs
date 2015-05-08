@@ -19,6 +19,10 @@ namespace Reservations
             get { return show; }
             set { show = value; }
         }
+        public string ShowName
+        {
+            get { return Show.Name; }
+        }
         public int SeatNumber
         {
             get { return seatnumber; }

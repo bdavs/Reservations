@@ -14,6 +14,7 @@ namespace Reservations
     {
         Customer selectedCustomer = new Customer();
         Shows selectedShow = new Shows();
+        public static int tempIndex;
         public AdminForm()
         {
             InitializeComponent();
@@ -61,6 +62,13 @@ namespace Reservations
                 try
                 {
                     selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
+                    tempIndex = UserForm.customerList.IndexOf(selectedCustomer);
+                    TicketBox.Items.Clear();
+                    foreach (Ticket t in selectedCustomer.Tickets)
+                        TicketBox.Items.Add(t);
+                    TicketBox.DisplayMember = "ShowName";
+                    addTicketButton.Enabled = true;
+                    removeTicketButton.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -109,6 +117,10 @@ namespace Reservations
             {
                 DateLabel.Text = "Tickets";
                 DateSelect.Visible = false;
+                addTicketButton.Visible = true;
+                removeTicketButton.Visible = true;
+                addTicketButton.Enabled = false;
+                removeTicketButton.Enabled = false;
                 TicketBox.Visible = true;
                 UserLabel.Text = "Users";
                 editEventButton.Text = "Edit User";
@@ -127,6 +139,8 @@ namespace Reservations
             {
                 DateLabel.Text = "Date";
                 DateSelect.Visible = true;
+                addTicketButton.Visible = false;
+                removeTicketButton.Visible = false;
                 TicketBox.Visible = false;
                 UserLabel.Text = "Events";
                 editEventButton.Text = "Edit Event";
@@ -171,6 +185,7 @@ namespace Reservations
                 UserList.Items.Clear();
                 foreach (Customer c in UserForm.customerList)
                     UserList.Items.Add(c);
+                TicketBox.Items.Clear();
                 this.Refresh();
             }
             else
@@ -218,6 +233,24 @@ namespace Reservations
                 EEF.Closed += new EventHandler(RefreshData);
                 EEF.Show();
             }
+
+        }
+
+        private void TicketBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            removeTicketButton.Enabled = true;
+        }
+
+        private void addTicketButton_Click(object sender, EventArgs e)
+        {
+            ticketForm TF = new ticketForm(selectedCustomer);
+            TF.Closed += new EventHandler(RefreshData);
+            TF.Show();   
+            
+        }
+
+        private void removeTicketButton_Click(object sender, EventArgs e)
+        {
 
         }
 

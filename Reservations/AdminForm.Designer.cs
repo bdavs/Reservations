@@ -39,6 +39,8 @@
             this.ViewUserButton = new System.Windows.Forms.Button();
             this.VenueButton = new System.Windows.Forms.Button();
             this.TicketBox = new System.Windows.Forms.ListBox();
+            this.addTicketButton = new System.Windows.Forms.Button();
+            this.removeTicketButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateSelect
@@ -151,12 +153,41 @@
             this.TicketBox.Name = "TicketBox";
             this.TicketBox.Size = new System.Drawing.Size(227, 160);
             this.TicketBox.TabIndex = 18;
+            this.TicketBox.SelectedIndexChanged += new System.EventHandler(this.TicketBox_SelectedIndexChanged);
+            // 
+            // addTicketButton
+            // 
+            this.addTicketButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addTicketButton.Enabled = false;
+            this.addTicketButton.Location = new System.Drawing.Point(36, 217);
+            this.addTicketButton.Name = "addTicketButton";
+            this.addTicketButton.Size = new System.Drawing.Size(88, 27);
+            this.addTicketButton.TabIndex = 19;
+            this.addTicketButton.Text = "Add Ticket";
+            this.addTicketButton.UseVisualStyleBackColor = true;
+            this.addTicketButton.Visible = false;
+            this.addTicketButton.Click += new System.EventHandler(this.addTicketButton_Click);
+            // 
+            // removeTicketButton
+            // 
+            this.removeTicketButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeTicketButton.Enabled = false;
+            this.removeTicketButton.Location = new System.Drawing.Point(130, 217);
+            this.removeTicketButton.Name = "removeTicketButton";
+            this.removeTicketButton.Size = new System.Drawing.Size(88, 27);
+            this.removeTicketButton.TabIndex = 20;
+            this.removeTicketButton.Text = "Remove Ticket";
+            this.removeTicketButton.UseVisualStyleBackColor = true;
+            this.removeTicketButton.Visible = false;
+            this.removeTicketButton.Click += new System.EventHandler(this.removeTicketButton_Click);
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 243);
+            this.ClientSize = new System.Drawing.Size(604, 248);
+            this.Controls.Add(this.removeTicketButton);
+            this.Controls.Add(this.addTicketButton);
             this.Controls.Add(this.TicketBox);
             this.Controls.Add(this.VenueButton);
             this.Controls.Add(this.ViewUserButton);
@@ -192,5 +223,7 @@
         private System.Windows.Forms.Button ViewUserButton;
         private System.Windows.Forms.Button VenueButton;
         private System.Windows.Forms.ListBox TicketBox;
+        private System.Windows.Forms.Button addTicketButton;
+        private System.Windows.Forms.Button removeTicketButton;
     }
 }
