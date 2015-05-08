@@ -33,6 +33,8 @@
             this.SeatNumber = new System.Windows.Forms.TextBox();
             this.PurchaseButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,11 +83,29 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(162, 605);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 609);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Price";
+            // 
             // SeatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 774);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.PurchaseButton);
             this.Controls.Add(this.SeatNumber);
@@ -106,6 +126,8 @@
         private System.Windows.Forms.TextBox SeatNumber;
         private System.Windows.Forms.Button PurchaseButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
 
     }
 }

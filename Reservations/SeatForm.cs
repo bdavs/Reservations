@@ -18,6 +18,7 @@ namespace Reservations
         public List<Venue> venueList = Venue.LoadVenues(); public List<Customer> customerList = Customer.LoadCustomers();
         public Venue currentVenue = new Venue();
         public int venueIndex; public int customerIndex; 
+        public double price=0;
         public SeatForm()
         {
             InitializeComponent();
@@ -85,11 +86,15 @@ namespace Reservations
                 {
                     buttonArray[index].BackColor = Color.Red;
                     currentVenue.Seats_Taken.Add(currentVenue.Seat_Location.ElementAt(index));
+                    price += currentShow.Price;
+                    textBox1.Text = price.ToString();
                 }
                 else if (buttonArray[index].BackColor == Color.Red)
                 {
                     buttonArray[index].BackColor = Color.Green;
                     currentVenue.Seats_Taken.Remove(currentVenue.Seat_Location.ElementAt(index));
+                    price -= currentShow.Price;
+                    textBox1.Text = price.ToString();
                 }
                 SeatNumber.Text = buttonArray[index].Text;
             }

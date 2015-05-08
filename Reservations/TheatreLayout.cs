@@ -76,8 +76,11 @@ namespace Reservations
                 buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
                 bool taken = tempVenue.Seat_Location.Exists(g => g == buttonArray[i].Location);
+                bool taken2 = tempVenue.Seats_Taken.Exists(g => g == buttonArray[i].Location);
                 if (taken == true)
                     buttonArray[i].BackColor = Color.Red;
+                if (taken2 == true)
+                    buttonArray[i].BackColor = Color.Purple;
                 buttonArray[i].Tag = i;
                 if ((i + 1) % 40 == 0)
                 {
