@@ -1,26 +1,6 @@
 <?xml version="1.0"?>
 <ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Customer>
-    <Name>abba</Name>
-    <Address>123</Address>
-    <Phone>(112) 121-2121</Phone>
-    <Credit>1234-5678-9087-6543</Credit>
-    <Email>rew</Email>
-    <Size>5</Size>
-    <Tickets>
-      <Ticket>
-        <Show>
-          <Name>For White Girls Who Have Considered Patricide When the Tortise Is Enuf</Name>
-          <Date>2015-06-25T18:30:00</Date>
-          <VenueName>Globe Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>3</SeatNumber>
-      </Ticket>
-    </Tickets>
-  </Customer>
-  <Customer>
     <Name>Keegan</Name>
     <Address>Keegan Way</Address>
     <Phone>(555) 555-5555</Phone>
@@ -81,7 +61,47 @@
     </Tickets>
   </Customer>
   <Customer>
-    <Name>tester mctesty</Name>
+    <Name>Abba</Name>
+    <Address>123</Address>
+    <Phone>(112) 121-2121</Phone>
+    <Credit>1234-5678-9087-6543</Credit>
+    <Email>rew</Email>
+    <Size>5</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>For White Girls Who Have Considered Patricide When the Tortise Is Enuf</Name>
+          <Date>2015-06-25T18:30:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
+  </Customer>
+  <Customer>
+    <Name>Miles Tails Per Hour</Name>
+    <Address>Oh God No</Address>
+    <Phone>(897) 590-7473</Phone>
+    <Credit>0000-0000-0000-0000</Credit>
+    <Email>He'sShowingUpUninvited.jpg</Email>
+    <Size>100</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>A Lawn Bike Named Apathy</Name>
+          <Date>2015-06-09T12:45:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>18.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
+  </Customer>
+  <Customer>
+    <Name>Tester McTesty</Name>
     <Address>123 sesame st</Address>
     <Phone>(222) 222-2222</Phone>
     <Credit>2345-6789-0876-5425</Credit>
@@ -111,73 +131,12 @@
     </Tickets>
   </Customer>
   <Customer>
-    <Name>Miles Tails Per Hour</Name>
-    <Address>Oh God No</Address>
-    <Phone>(897) 590-7473</Phone>
-    <Credit>0000-0000-0000-0000</Credit>
-    <Email>He'sShowingUpUninvited.jpg</Email>
-    <Size>100</Size>
-    <Tickets>
-      <Ticket>
-        <Show>
-          <Name>A Lawn Bike Named Apathy</Name>
-          <Date>2015-06-09T12:45:00</Date>
-          <VenueName>Globe Theater</VenueName>
-          <Price>18.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>3</SeatNumber>
-      </Ticket>
-      <Ticket>
-        <Show>
-          <Name>Dog on a Cold Copper Floor</Name>
-          <Date>2015-05-20T15:00:00</Date>
-          <VenueName>Huntington Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>0</SeatNumber>
-      </Ticket>
-      <Ticket>
-        <Show>
-          <Name>Dog on a Cold Copper Floor</Name>
-          <Date>2015-05-20T15:00:00</Date>
-          <VenueName>Huntington Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>1</SeatNumber>
-      </Ticket>
-      <Ticket>
-        <Show>
-          <Name>Dog on a Cold Copper Floor</Name>
-          <Date>2015-05-20T15:00:00</Date>
-          <VenueName>Huntington Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>2</SeatNumber>
-      </Ticket>
-      <Ticket>
-        <Show>
-          <Name>Dog on a Cold Copper Floor</Name>
-          <Date>2015-05-20T15:00:00</Date>
-          <VenueName>Huntington Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>2</SeatNumber>
-      </Ticket>
-      <Ticket>
-        <Show>
-          <Name>Dog on a Cold Copper Floor</Name>
-          <Date>2015-05-20T15:00:00</Date>
-          <VenueName>Huntington Theater</VenueName>
-          <Price>19.99</Price>
-          <Available>true</Available>
-        </Show>
-        <SeatNumber>3</SeatNumber>
-      </Ticket>
-    </Tickets>
+    <Name>Dan</Name>
+    <Address>1243</Address>
+    <Phone>(438) 492-3089</Phone>
+    <Credit>6782-9678-3974-9078</Credit>
+    <Email>453898</Email>
+    <Size>18</Size>
+    <Tickets />
   </Customer>
 </ArrayOfCustomer>

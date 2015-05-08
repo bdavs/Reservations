@@ -346,7 +346,10 @@ namespace Reservations
                 else
                     CreateNewUserButton.Text = "Or Create New User";
             if ((selectedShow.Name != null) && (tickets > 0))
+            {
+                SeatSelectButton.Enabled = true;
                 CheckoutButton.Enabled = true;
+            }
 
         }
 
@@ -367,8 +370,10 @@ namespace Reservations
                     selectedShow = new Shows();
             }
             if ((tickets > 0) && (selectedCustomer.Name != null))
+            {
                 CheckoutButton.Enabled = true;
-            SeatSelectButton.Enabled = true;
+                SeatSelectButton.Enabled = true;
+            }
         }
 
         private void ticketsComboBox_SelectedIndexChanged(object sender, EventArgs e)

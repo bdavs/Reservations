@@ -84,4 +84,11 @@
     <Price>12.99</Price>
     <Available>true</Available>
   </Shows>
+  <Shows>
+    <Name>Avenue Q</Name>
+    <Date>2015-05-10T14:40:54</Date>
+    <VenueName>Ford Theater</VenueName>
+    <Price>12.99</Price>
+    <Available>true</Available>
+  </Shows>
 </ArrayOfShows>

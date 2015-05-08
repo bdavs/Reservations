@@ -48,7 +48,8 @@ namespace Reservations
             try
             {
                 Customer cumstomertemp = new Customer(this.nameBox.Text, this.addressBox.Text, this.phoneNumberBox.Text, this.creditCardBox.Text, this.emailBox.Text, int.Parse(this.familySizeBox.Text));
-                cumstomertemp.Tickets = selectedCustomer.Tickets;
+                if (tempIndex != -1) cumstomertemp.Tickets = selectedCustomer.Tickets;
+                else cumstomertemp.Tickets = new List<Ticket>();
                 List<Customer> templist = Customer.LoadCustomers();
                 if(tempIndex !=-1) templist.RemoveAt(tempIndex);
                 templist.Add(cumstomertemp);
