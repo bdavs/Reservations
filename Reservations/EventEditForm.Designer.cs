@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // familySizeBox
@@ -144,11 +145,20 @@
             this.nameBox.Size = new System.Drawing.Size(189, 20);
             this.nameBox.TabIndex = 13;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy     hh:mm:sstt";
+            this.dateTimePicker1.Location = new System.Drawing.Point(11, 67);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 20);
+            this.dateTimePicker1.TabIndex = 26;
+            // 
             // EventEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 314);
+            this.ClientSize = new System.Drawing.Size(253, 314);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.familySizeBox);
             this.Controls.Add(this.creditCardBox);
             this.Controls.Add(this.phoneNumberBox);
@@ -182,6 +192,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
     }
 }
