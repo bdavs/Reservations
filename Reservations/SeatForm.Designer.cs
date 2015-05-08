@@ -33,17 +33,18 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 360);
+            this.panel1.Size = new System.Drawing.Size(810, 470);
             this.panel1.TabIndex = 0;
             // 
             // SeatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 624);
+            this.ClientSize = new System.Drawing.Size(1139, 774);
             this.Controls.Add(this.panel1);
             this.Name = "SeatForm";
             this.Text = "SeatForm";
@@ -55,5 +56,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+
     }
 }

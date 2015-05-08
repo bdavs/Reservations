@@ -20,6 +20,7 @@ namespace Reservations
         public SeatForm()
         {
             InitializeComponent();
+            
         }
 
         private void SeatForm_Load(object sender, EventArgs e)
@@ -32,28 +33,45 @@ namespace Reservations
                     currentVenue = q;
         }
             CreateButtons();
+            panel1.SendToBack();
         }
 
         private void CreateButtons()
         {
             string[] rowLetterString = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-            string rowDesignation;
+            /*string rowDesignation;
             int seatDesignation;
             int horizontal = 10;
-            int vertical = 10;
-            
+            int vertical = 10;*/
+
+            int i = 0;
             foreach (Point q in currentVenue.Seat_Location)
             {
-                int i = 0;
+                
                 buttonArray[i] = new Button();
                 buttonArray[i].Size = new Size(15, 15);
-                buttonArray[i].Location = q;
+                buttonArray[i].Location = new Point(q.X/2,q.Y/2);
                 buttonArray[i].Text = i.ToString();//rowDesignation + seatDesignation.ToString();
-                //buttonArray[i].MouseUp += buttonArray_click;
+                buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
                 buttonArray[i].Tag = i;
                 this.Controls.Add(buttonArray[i]);
                 i++;
+            }
+        }
+
+        private void buttonArray_click(object sender, MouseEventArgs mea)
+        {
+            if (sender.GetType() == typeof(System.Windows.Forms.Button))
+            {
+                int tag = (int)((System.Windows.Forms.Button)sender).Tag;       // tag is a programmer usable field
+                int r = tag / 40;                                                // the index was put in this field by CreateButtons() below
+                int c = tag % 40;
+                int index = r * 40 + c;
+                if (buttonArray[index].BackColor == Color.Green)
+                    buttonArray[index].BackColor = Color.Red;
+                else if (buttonArray[index].BackColor == Color.Red)
+                    buttonArray[index].BackColor = Color.Green;
             }
         }
 
