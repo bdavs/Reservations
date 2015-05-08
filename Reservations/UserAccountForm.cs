@@ -19,6 +19,7 @@ namespace Reservations
         public UserAccountForm()
         {
             InitializeComponent();
+            tempIndex = -1;
         }
         public UserAccountForm(Customer c)
         {
@@ -40,7 +41,7 @@ namespace Reservations
             {
                 Customer cumstomertemp = new Customer(this.nameBox.Text, this.addressBox.Text, this.phoneNumberBox.Text, this.creditCardBox.Text, this.emailBox.Text, int.Parse(this.familySizeBox.Text));
                 List<Customer> templist = Customer.LoadCustomers();
-                templist.RemoveAt(tempIndex);
+                if(tempIndex !=-1) templist.RemoveAt(tempIndex);
                 templist.Add(cumstomertemp);
                 Customer.SaveCustomers(templist);
                 

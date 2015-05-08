@@ -98,20 +98,16 @@ namespace Reservations
 
         private void editEventButton_Click(object sender, EventArgs e)
         {
+            UserAccountForm UAF = new UserAccountForm();
             if (editEventButton.Text == "Edit User")
             {
                 UserForm.customerList = Customer.LoadCustomers();
-                //Customer temp = new Customer();
-                /*foreach(Customer c in UserForm.customerList)
-                {
-                    if (c == UserList.SelectedItem) temp = c;   //WTF why dis no work???
-                }*/
-                UserAccountForm UAF = new UserAccountForm(selectedCustomer);//dis now work
-                //UAF.tempIndex = UserForm.customerList.IndexOf(selectedCustomer);
+               
+                UAF = new UserAccountForm(selectedCustomer);//dis now work
+                
                 UAF.Closed += new EventHandler(RefreshData);
                 
-                UAF.Show();
-                
+                UAF.Show();   
             }
         }
         private void RefreshData(object sender, EventArgs e)
@@ -131,6 +127,21 @@ namespace Reservations
         {
             TheatreForm TF = new TheatreForm();
             TF.ShowDialog();
+        }
+
+        private void addEventButtons_Click(object sender, EventArgs e)
+        {
+            
+            if (editEventButton.Text == "Edit User")
+            {
+                //UserForm.customerList = Customer.LoadCustomers();
+               
+                UserAccountForm UAF = new UserAccountForm();
+                
+                UAF.Closed += new EventHandler(RefreshData);
+
+                UAF.Show();
+            }
         }
     }
 }
