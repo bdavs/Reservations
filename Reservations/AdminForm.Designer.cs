@@ -37,11 +37,13 @@
             this.addEventButtons = new System.Windows.Forms.Button();
             this.editEventButton = new System.Windows.Forms.Button();
             this.ViewUserButton = new System.Windows.Forms.Button();
+            this.VenueButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateSelect
             // 
-            this.DateSelect.Location = new System.Drawing.Point(18, 51);
+            this.DateSelect.Location = new System.Drawing.Point(24, 63);
+            this.DateSelect.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.DateSelect.Name = "DateSelect";
             this.DateSelect.TabIndex = 8;
             this.DateSelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateSelected);
@@ -49,9 +51,11 @@
             // UserList
             // 
             this.UserList.FormattingEnabled = true;
-            this.UserList.Location = new System.Drawing.Point(257, 53);
+            this.UserList.ItemHeight = 16;
+            this.UserList.Location = new System.Drawing.Point(343, 65);
+            this.UserList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(234, 160);
+            this.UserList.Size = new System.Drawing.Size(311, 196);
             this.UserList.TabIndex = 9;
             this.UserList.Click += new System.EventHandler(this.UserList_Click);
             this.UserList.SelectedIndexChanged += new System.EventHandler(this.UserList_SelectedIndexChanged);
@@ -60,9 +64,10 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(102, 18);
+            this.DateLabel.Location = new System.Drawing.Point(136, 22);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(53, 24);
+            this.DateLabel.Size = new System.Drawing.Size(69, 31);
             this.DateLabel.TabIndex = 10;
             this.DateLabel.Text = "Date";
             // 
@@ -70,18 +75,20 @@
             // 
             this.UserLabel.AutoSize = true;
             this.UserLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.Location = new System.Drawing.Point(313, 18);
+            this.UserLabel.Location = new System.Drawing.Point(417, 22);
+            this.UserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(71, 24);
+            this.UserLabel.Size = new System.Drawing.Size(93, 31);
             this.UserLabel.TabIndex = 11;
             this.UserLabel.Text = "Events";
             // 
             // EditUserButton
             // 
             this.EditUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditUserButton.Location = new System.Drawing.Point(504, 53);
+            this.EditUserButton.Location = new System.Drawing.Point(672, 65);
+            this.EditUserButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditUserButton.Name = "EditUserButton";
-            this.EditUserButton.Size = new System.Drawing.Size(88, 27);
+            this.EditUserButton.Size = new System.Drawing.Size(117, 33);
             this.EditUserButton.TabIndex = 12;
             this.EditUserButton.Text = "View Seats";
             this.EditUserButton.UseVisualStyleBackColor = true;
@@ -90,9 +97,10 @@
             // BackButton
             // 
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackButton.Location = new System.Drawing.Point(504, 186);
+            this.BackButton.Location = new System.Drawing.Point(672, 229);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(88, 27);
+            this.BackButton.Size = new System.Drawing.Size(117, 33);
             this.BackButton.TabIndex = 13;
             this.BackButton.Text = "Go Back";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -101,9 +109,10 @@
             // addEventButtons
             // 
             this.addEventButtons.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEventButtons.Location = new System.Drawing.Point(504, 153);
+            this.addEventButtons.Location = new System.Drawing.Point(672, 188);
+            this.addEventButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addEventButtons.Name = "addEventButtons";
-            this.addEventButtons.Size = new System.Drawing.Size(88, 27);
+            this.addEventButtons.Size = new System.Drawing.Size(117, 33);
             this.addEventButtons.TabIndex = 14;
             this.addEventButtons.Text = "Add Event(s)";
             this.addEventButtons.UseVisualStyleBackColor = true;
@@ -111,9 +120,10 @@
             // editEventButton
             // 
             this.editEventButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editEventButton.Location = new System.Drawing.Point(504, 120);
+            this.editEventButton.Location = new System.Drawing.Point(672, 148);
+            this.editEventButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editEventButton.Name = "editEventButton";
-            this.editEventButton.Size = new System.Drawing.Size(88, 27);
+            this.editEventButton.Size = new System.Drawing.Size(117, 33);
             this.editEventButton.TabIndex = 15;
             this.editEventButton.Text = "Edit Event";
             this.editEventButton.UseVisualStyleBackColor = true;
@@ -122,19 +132,31 @@
             // ViewUserButton
             // 
             this.ViewUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewUserButton.Location = new System.Drawing.Point(504, 86);
+            this.ViewUserButton.Location = new System.Drawing.Point(672, 106);
+            this.ViewUserButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ViewUserButton.Name = "ViewUserButton";
-            this.ViewUserButton.Size = new System.Drawing.Size(88, 27);
+            this.ViewUserButton.Size = new System.Drawing.Size(117, 33);
             this.ViewUserButton.TabIndex = 16;
             this.ViewUserButton.Text = "View All Users";
             this.ViewUserButton.UseVisualStyleBackColor = true;
             this.ViewUserButton.Click += new System.EventHandler(this.ViewUserButton_Click);
             // 
+            // VenueButton
+            // 
+            this.VenueButton.Location = new System.Drawing.Point(672, 27);
+            this.VenueButton.Name = "VenueButton";
+            this.VenueButton.Size = new System.Drawing.Size(117, 31);
+            this.VenueButton.TabIndex = 17;
+            this.VenueButton.Text = "Venue Control";
+            this.VenueButton.UseVisualStyleBackColor = true;
+            this.VenueButton.Click += new System.EventHandler(this.VenueButton_Click);
+            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 243);
+            this.ClientSize = new System.Drawing.Size(805, 299);
+            this.Controls.Add(this.VenueButton);
             this.Controls.Add(this.ViewUserButton);
             this.Controls.Add(this.editEventButton);
             this.Controls.Add(this.addEventButtons);
@@ -145,6 +167,7 @@
             this.Controls.Add(this.UserList);
             this.Controls.Add(this.DateSelect);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminForm";
@@ -166,5 +189,6 @@
         private System.Windows.Forms.Button addEventButtons;
         private System.Windows.Forms.Button editEventButton;
         private System.Windows.Forms.Button ViewUserButton;
+        private System.Windows.Forms.Button VenueButton;
     }
 }

@@ -145,11 +145,8 @@ namespace Reservations
 
         private void SeatSelectButton_Click(object sender, EventArgs e)
         {
-            //SeatForm SF = new SeatForm();
-            //SF.Showdialog();
- 
-            TheatreForm TF = new TheatreForm();
-            TF.ShowDialog();
+            SeatForm SF = new SeatForm();
+            SF.ShowDialog();
         }
 
         private void monthCalendar_DateSelected(object sender, DateRangeEventArgs e)
