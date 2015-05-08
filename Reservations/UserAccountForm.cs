@@ -31,6 +31,7 @@ namespace Reservations
             creditCardBox.Text = c.Credit;
             CreateUserButton.Text = "Save Info";
             tempIndex = templist.FindIndex(i => i.Name == c.Name);
+            
         }
 
         private void CreateUserButton_Click(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace Reservations
             }
             catch (FormatException) { MessageBox.Show("Please Complete All Fields", "Field Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             
+        }
+
+        private void UserAccountForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

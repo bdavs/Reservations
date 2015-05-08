@@ -75,13 +75,13 @@ namespace Reservations
             // Create and initialize column headers for myListView.
             ColumnHeader columnHeader0 = new ColumnHeader();
             columnHeader0.Text = "Show";
-            columnHeader0.Width = showListBox.Width / 2;
+            columnHeader0.Width = showListBox.Width / 2-3;
             ColumnHeader columnHeader1 = new ColumnHeader();
             columnHeader1.Text = "Venue";
-            columnHeader1.Width = showListBox.Width/4;
+            columnHeader1.Width = showListBox.Width/4-10;
             ColumnHeader columnHeader2 = new ColumnHeader();
             columnHeader2.Text = "Time";
-            columnHeader2.Width = showListBox.Width/4-2;
+            columnHeader2.Width = showListBox.Width/4-7;
 
             // Add the column headers to myListView.
             showListBox.Columns.AddRange(new ColumnHeader[] { columnHeader0, columnHeader1, columnHeader2 });
@@ -344,7 +344,7 @@ namespace Reservations
                 }
                 else
                     CreateNewUserButton.Text = "Or Create New User";
-            
+            if(customerList.Exists(i=> i.Name == tc.Name));
 
         }
 
