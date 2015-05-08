@@ -33,7 +33,7 @@ namespace Reservations
         private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
         {
             MonthCalendar mc = sender as MonthCalendar;
-
+            editEventButton.Enabled = false;
             UserList.Items.Clear();
             foreach (Shows s in UserForm.showList)
             {
@@ -165,9 +165,6 @@ namespace Reservations
             }
         }
 
-        private void DateSelect_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
+        
     }
 }
