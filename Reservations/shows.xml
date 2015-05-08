@@ -2,8 +2,8 @@
 <ArrayOfShows xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Shows>
     <Name>A Midsummer Night's Scream</Name>
-    <Date>2015-05-05T19:00:00</Date>
-    <VenueName>Globe Theater</VenueName>
+    <Date>2015-05-06T19:00:00</Date>
+    <VenueName>Huntington Theater</VenueName>
     <Price>14.99</Price>
     <Available>true</Available>
   </Shows>
@@ -23,9 +23,9 @@
   </Shows>
   <Shows>
     <Name>A Lawn Bike Named Apathy</Name>
-    <Date>2015-06-15T12:30:00</Date>
-    <VenueName>Huntington Theater</VenueName>
-    <Price>14.99</Price>
+    <Date>2015-06-09T12:45:00</Date>
+    <VenueName>Globe Theater</VenueName>
+    <Price>18.99</Price>
     <Available>true</Available>
   </Shows>
   <Shows>
@@ -46,7 +46,7 @@
     <Name>Bromeo and Griliet</Name>
     <Date>2015-07-12T17:30:00</Date>
     <VenueName>Huntington Theater</VenueName>
-    <Price>19.99</Price>
+    <Price>14.99</Price>
     <Available>true</Available>
   </Shows>
   <Shows>
@@ -68,6 +68,13 @@
     <Date>2015-08-14T16:30:00</Date>
     <VenueName>Huntington Theater</VenueName>
     <Price>14.99</Price>
+    <Available>true</Available>
+  </Shows>
+  <Shows>
+    <Name>Diddler on the Roof</Name>
+    <Date>2015-05-30T21:05:00</Date>
+    <VenueName>Globe Theater</VenueName>
+    <Price>100</Price>
     <Available>true</Available>
   </Shows>
 </ArrayOfShows>

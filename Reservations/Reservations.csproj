@@ -91,6 +91,7 @@
     <Compile Include="TheatreLayout.Designer.cs">
       <DependentUpon>TheatreLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs" />
     <Compile Include="UserAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>

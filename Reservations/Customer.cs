@@ -16,6 +16,7 @@ namespace Reservations
        private string credit;
        private string email;
        private int size;
+       private List<Ticket> tickets;
 
        public string Name
        {
@@ -47,6 +48,11 @@ namespace Reservations
            get { return size; }
            set { size = value; }
        }
+       public List<Ticket> Tickets
+       {
+           get { return tickets; }
+           set { tickets = value; }
+       }
 
        public Customer()
        { }
@@ -58,6 +64,7 @@ namespace Reservations
            credit = c;
            email = e;
            size = s;
+           tickets = new List<Ticket>();
        }
 
        public static void XMLInit()

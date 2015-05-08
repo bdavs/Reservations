@@ -25,19 +25,19 @@
     <Size>8</Size>
   </Customer>
   <Customer>
+    <Name>Miles Tails Per Hour</Name>
+    <Address>Oh God No</Address>
+    <Phone>(897) 590-7473</Phone>
+    <Credit>0000-0000-0000-0000</Credit>
+    <Email>He'sShowingUpUninvited.jpg</Email>
+    <Size>100</Size>
+  </Customer>
+  <Customer>
     <Name>abba</Name>
     <Address>123</Address>
     <Phone>(112) 121-2121</Phone>
     <Credit>1234-5678-9087-6543</Credit>
     <Email>rew</Email>
     <Size>5</Size>
-  </Customer>
-  <Customer>
-    <Name>mr potato head</Name>
-    <Address>3fjkjkl</Address>
-    <Phone>(299) 043-2890</Phone>
-    <Credit>3129-0890-8932-0489</Credit>
-    <Email>321jkldfskl</Email>
-    <Size>8</Size>
   </Customer>
 </ArrayOfCustomer>

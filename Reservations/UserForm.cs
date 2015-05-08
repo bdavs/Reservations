@@ -47,6 +47,7 @@ namespace Reservations
            // ICollection<Shows> test = CollectionViewSource.GetDefaultView(showList);
             
         }
+
         private void displayAllShows()
         {
             showListBox.Items.Clear();
@@ -202,7 +203,7 @@ namespace Reservations
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 // Closes the parent form. 
-                this.Close();
+                
             }
 
         }

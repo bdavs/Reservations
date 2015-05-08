@@ -20,8 +20,9 @@ namespace Reservations
         {
             InitializeComponent();
             tempIndex = -1;
+            CreateUserButton.Location = new Point(66, 270);
         }
-        public UserAccountForm(Customer c)
+        public UserAccountForm(Customer c,bool a=false)
         {
             InitializeComponent();
             nameBox.Text = c.Name;
@@ -31,7 +32,13 @@ namespace Reservations
             familySizeBox.Text = c.Size.ToString();
             creditCardBox.Text = c.Credit;
             CreateUserButton.Text = "Save Info";
+            removeButton.Visible = a;
+            if (a)
+                CreateUserButton.Location = new Point(30, 270);
+            else
+                CreateUserButton.Location = new Point(66, 270);
             tempIndex = templist.FindIndex(i => i.Name == c.Name);
+            
             
         }
 
@@ -55,6 +62,14 @@ namespace Reservations
         private void UserAccountForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            List<Customer> templist = Customer.LoadCustomers();
+            if (tempIndex != -1) templist.RemoveAt(tempIndex);
+            Customer.SaveCustomers(templist);
+            this.Close();
         }
     }
 }

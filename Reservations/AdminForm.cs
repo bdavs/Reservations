@@ -13,6 +13,7 @@ namespace Reservations
     public partial class AdminForm : Form
     {
         Customer selectedCustomer = new Customer();
+        Shows selectedShow = new Shows();
         public AdminForm()
         {
             InitializeComponent();
@@ -28,12 +29,13 @@ namespace Reservations
             {
                 DateSelect.AddBoldedDate(s.Date);
             }
+            TicketBox.Visible = false;
         }
 
         private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
         {
             MonthCalendar mc = sender as MonthCalendar;
-
+            editEventButton.Enabled = false;
             UserList.Items.Clear();
             foreach (Shows s in UserForm.showList)
             {
@@ -54,16 +56,33 @@ namespace Reservations
 
         private void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
+             if (editEventButton.Text == "Edit User")
+            {
+                try
+                {
+                    selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
+                }
+                catch (Exception ex)
+                {
+                    if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                          selectedCustomer = new Customer();
+                }
+             }
+             else
+             {
+                try
+                {
+                    selectedShow = UserForm.showList.Find(item => item == UserList.SelectedItems[0]);
+                }
+                catch (Exception ex)
+                {
+                    if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                          selectedShow = new Shows();
+                }
+             }
 
-            try
-            {
-                selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
-            }
-            catch (Exception ex)
-            {
-                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
-                      selectedCustomer = new Customer();
-            }
+
+            
         }
 
         private void EditUserButton_Click(object sender, EventArgs e)
@@ -88,6 +107,9 @@ namespace Reservations
             editEventButton.Enabled = false;
             if (ViewUserButton.Text == "View All Users")
             {
+                DateLabel.Text = "Tickets";
+                DateSelect.Visible = false;
+                TicketBox.Visible = true;
                 UserLabel.Text = "Users";
                 editEventButton.Text = "Edit User";
                 addEventButtons.Text = "Add User(s)";
@@ -97,11 +119,15 @@ namespace Reservations
                 {
                     UserList.Items.Add(dude);
                 }
+                
                 UserList.DisplayMember = "Name";
                 UserList.Sorted = true;
             }
             else 
             {
+                DateLabel.Text = "Date";
+                DateSelect.Visible = true;
+                TicketBox.Visible = false;
                 UserLabel.Text = "Events";
                 editEventButton.Text = "Edit Event";
                 addEventButtons.Text = "Add Event(s)";
@@ -119,16 +145,22 @@ namespace Reservations
 
         private void editEventButton_Click(object sender, EventArgs e)
         {
-            UserAccountForm UAF = new UserAccountForm();
+            
             if (editEventButton.Text == "Edit User")
             {
                 UserForm.customerList = Customer.LoadCustomers();
-               
-                UAF = new UserAccountForm(selectedCustomer);//dis now work
-                
+                UserAccountForm UAF = new UserAccountForm(selectedCustomer,true);//dis now work 
                 UAF.Closed += new EventHandler(RefreshData);
                 
                 UAF.Show();   
+            }
+            else
+            {
+                UserForm.showList = Shows.LoadShows();
+                EventEditForm EEF = new EventEditForm(selectedShow);
+                EEF.Closed += new EventHandler(RefreshData);
+
+                EEF.Show();   
             }
         }
         private void RefreshData(object sender, EventArgs e)
@@ -148,6 +180,11 @@ namespace Reservations
                 foreach (Shows s in UserForm.showList)
                     UserList.Items.Add(s);
                 editEventButton.Enabled = false;
+                DateSelect.RemoveAllBoldedDates();
+                foreach (Shows s in UserForm.showList)
+                {
+                    DateSelect.AddBoldedDate(s.Date);
+                }
 
             }
         }
@@ -184,9 +221,6 @@ namespace Reservations
 
         }
 
-        private void DateSelect_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
+        
     }
 }

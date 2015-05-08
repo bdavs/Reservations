@@ -38,6 +38,7 @@
             this.editEventButton = new System.Windows.Forms.Button();
             this.ViewUserButton = new System.Windows.Forms.Button();
             this.VenueButton = new System.Windows.Forms.Button();
+            this.TicketBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // DateSelect
@@ -45,7 +46,6 @@
             this.DateSelect.Location = new System.Drawing.Point(18, 51);
             this.DateSelect.Name = "DateSelect";
             this.DateSelect.TabIndex = 8;
-            this.DateSelect.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateChanged);
             this.DateSelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateSelected);
             // 
             // UserList
@@ -144,11 +144,20 @@
             this.VenueButton.UseVisualStyleBackColor = true;
             this.VenueButton.Click += new System.EventHandler(this.VenueButton_Click);
             // 
+            // TicketBox
+            // 
+            this.TicketBox.FormattingEnabled = true;
+            this.TicketBox.Location = new System.Drawing.Point(18, 51);
+            this.TicketBox.Name = "TicketBox";
+            this.TicketBox.Size = new System.Drawing.Size(227, 160);
+            this.TicketBox.TabIndex = 18;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 243);
+            this.Controls.Add(this.TicketBox);
             this.Controls.Add(this.VenueButton);
             this.Controls.Add(this.ViewUserButton);
             this.Controls.Add(this.editEventButton);
@@ -182,5 +191,6 @@
         private System.Windows.Forms.Button editEventButton;
         private System.Windows.Forms.Button ViewUserButton;
         private System.Windows.Forms.Button VenueButton;
+        private System.Windows.Forms.ListBox TicketBox;
     }
 }
