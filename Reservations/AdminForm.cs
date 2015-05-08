@@ -124,7 +124,7 @@ namespace Reservations
             {
                 UserForm.customerList = Customer.LoadCustomers();
                
-                UAF = new UserAccountForm(selectedCustomer);//dis now work
+                UAF = new UserAccountForm(selectedCustomer,true);//dis now work
                 
                 UAF.Closed += new EventHandler(RefreshData);
                 
@@ -133,11 +133,23 @@ namespace Reservations
         }
         private void RefreshData(object sender, EventArgs e)
         {
-            UserForm.customerList = Customer.LoadCustomers();
-            UserList.Items.Clear();
-            foreach (Customer c in UserForm.customerList)
-                UserList.Items.Add(c);
-            this.Refresh();
+            if (editEventButton.Text == "Edit User")
+            {
+                UserForm.customerList = Customer.LoadCustomers();
+                UserList.Items.Clear();
+                foreach (Customer c in UserForm.customerList)
+                    UserList.Items.Add(c);
+                this.Refresh();
+            }
+            else
+            {
+                UserForm.showList = Shows.LoadShows();
+                UserList.Items.Clear();
+                foreach (Shows s in UserForm.showList)
+                    UserList.Items.Add(s);
+                editEventButton.Enabled = false;
+
+            }
         }
         private void UserList_Click(object sender, EventArgs e)
         {
@@ -152,17 +164,24 @@ namespace Reservations
 
         private void addEventButtons_Click(object sender, EventArgs e)
         {
-            
+
             if (editEventButton.Text == "Edit User")
             {
                 //UserForm.customerList = Customer.LoadCustomers();
-               
+
                 UserAccountForm UAF = new UserAccountForm();
-                
+
                 UAF.Closed += new EventHandler(RefreshData);
 
                 UAF.Show();
             }
+            else 
+            {
+                EventEditForm EEF = new EventEditForm();
+                EEF.Closed += new EventHandler(RefreshData);
+                EEF.Show();
+            }
+
         }
 
         
