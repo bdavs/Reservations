@@ -251,7 +251,14 @@ namespace Reservations
 
         private void removeTicketButton_Click(object sender, EventArgs e)
         {
-
+            UserForm.customerList.RemoveAt(tempIndex);
+            selectedCustomer.Tickets.Remove((Ticket)TicketBox.SelectedItem);
+            UserForm.customerList.Add(selectedCustomer);
+            Customer.SaveCustomers(UserForm.customerList);
+            TicketBox.Items.Clear();
+            foreach (Ticket t in selectedCustomer.Tickets)
+                TicketBox.Items.Add(t);
+            removeTicketButton.Enabled = false;
         }
 
         
