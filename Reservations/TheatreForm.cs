@@ -61,10 +61,10 @@ namespace Reservations
 
         private void newTheatreButton_Click(object sender, EventArgs e)
         {
-            Venue tempVenue = new Venue();
-            tempVenue.Name = textBox1.Text;
-            tempVenue.Size = Convert.ToInt32(textBox2.Text);
-            TheatreLayout TL = new TheatreLayout(tempVenue);
+           
+            //tempVenue.Name = textBox1.Text;
+            //tempVenue.Size = Convert.ToInt32(textBox2.Text);
+            TheatreLayout TL = new TheatreLayout(textBox1.Text, Convert.ToInt32(textBox2.Text));
             TL.ShowDialog();
         }
     }

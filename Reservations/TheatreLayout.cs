@@ -34,6 +34,7 @@ namespace Reservations
             name1 = name;
             number1 = size;
             oldIndex = -1;
+            tempVenue = new Venue(name, size, size, new List<Point>(1), new List<Point>(1));
             this.WindowState = FormWindowState.Maximized;
 
         }
