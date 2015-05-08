@@ -2,7 +2,7 @@
 <ArrayOfShows xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Shows>
     <Name>A Midsummer Night's Scream</Name>
-    <Date>2015-05-05T19:00:00</Date>
+    <Date>2015-05-06T19:00:00</Date>
     <VenueName>Huntington Theater</VenueName>
     <Price>14.99</Price>
     <Available>true</Available>
@@ -46,7 +46,7 @@
     <Name>Bromeo and Griliet</Name>
     <Date>2015-07-12T17:30:00</Date>
     <VenueName>Huntington Theater</VenueName>
-    <Price>19.99</Price>
+    <Price>14.99</Price>
     <Available>true</Available>
   </Shows>
   <Shows>
