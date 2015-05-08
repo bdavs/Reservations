@@ -1,18 +1,34 @@
 <?xml version="1.0"?>
 <ArrayOfVenue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Venue>
-    <Name>Globe Theater</Name>
-    <Size>300</Size>
-    <Seats_Available>300</Seats_Available>
-  </Venue>
-  <Venue>
-    <Name>Ford Theater</Name>
-    <Size>200</Size>
-    <Seats_Available>200</Seats_Available>
-  </Venue>
-  <Venue>
-    <Name>Huntington Theater</Name>
-    <Size>400</Size>
-    <Seats_Available>400</Seats_Available>
+    <Name>potatotaotato</Name>
+    <Size>4</Size>
+    <Seats_Available>4</Seats_Available>
+    <Seat_Location>
+      <Point>
+        <X>210</X>
+        <Y>60</Y>
+      </Point>
+      <Point>
+        <X>150</X>
+        <Y>120</Y>
+      </Point>
+      <Point>
+        <X>270</X>
+        <Y>120</Y>
+      </Point>
+      <Point>
+        <X>210</X>
+        <Y>150</Y>
+      </Point>
+      <Point>
+        <X>120</X>
+        <Y>210</Y>
+      </Point>
+      <Point>
+        <X>240</X>
+        <Y>210</Y>
+      </Point>
+    </Seat_Location>
   </Venue>
 </ArrayOfVenue>

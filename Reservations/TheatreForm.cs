@@ -12,17 +12,19 @@ namespace Reservations
 {
     public partial class TheatreForm : Form
     {
+        Venue selectedTheatre = new Venue();
+        List<Venue> venueList = new List<Venue>();
         public TheatreForm()
         {
             InitializeComponent();
-           /* TheatreList = Venue.LoadVenues();
-           UserForm.showList.
+            
+            venueList= Venue.LoadVenues();
             TheatreList.Items.Clear();
-            foreach (Shows s in UserForm.showList)
-                TheatreList.Items.Add(s);
+            foreach (Venue v in venueList)
+                TheatreList.Items.Add(v);
             TheatreList.DisplayMember = "Name";
             TheatreList.Sorted = true;
-            editEventButton.Enabled = false;*/
+            //editEventButton.Enabled = false;
             //UserForm.selectCustomer.
         }
 
@@ -38,15 +40,21 @@ namespace Reservations
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string number = textBox2.Text;
-            int num = Convert.ToInt32(number);
-            TheatreLayout TL = new TheatreLayout(textBox1.Text, num);
+            //string number = textBox2.Text;
+            //int num = Convert.ToInt32(number);
+            int num = selectedTheatre.Seat_Location.Count;
+            TheatreLayout TL = new TheatreLayout(selectedTheatre);
             TL.ShowDialog();
         }
 
         private void save_Click(object sender, EventArgs e)
         {
+            Venue.SaveVenues(venueList);
+        }
 
+        private void TheatreList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedTheatre = venueList.Find(item => item == TheatreList.SelectedItems[0]);
         }
     }
 }
