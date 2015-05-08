@@ -58,5 +58,14 @@ namespace Reservations
             textBox1.Text = selectedTheatre.Name;
             textBox2.Text = selectedTheatre.Seat_Location.Count.ToString();
         }
+
+        private void newTheatreButton_Click(object sender, EventArgs e)
+        {
+            Venue tempVenue = new Venue();
+            tempVenue.Name = textBox1.Text;
+            tempVenue.Size = Convert.ToInt32(textBox2.Text);
+            TheatreLayout TL = new TheatreLayout(tempVenue);
+            TL.ShowDialog();
+        }
     }
 }

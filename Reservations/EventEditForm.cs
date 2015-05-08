@@ -18,6 +18,7 @@ namespace Reservations
         public EventEditForm()
         {
             InitializeComponent();
+            
             venuesList = Venue.LoadVenues();
             foreach (Venue v in venuesList)
                 venueComboBox.Items.Add(v.Name);
@@ -35,6 +36,7 @@ namespace Reservations
             venueComboBox.SelectedItem = s.VenueName;
             Schedule.Value = s.Date;
             oldIndex = UserForm.showList.FindIndex(i => i.Name == s.Name);
+            CreateEventButton.Text = "Save Info";
         }
 
         private void nameBox_TextChanged(object sender, EventArgs e)
