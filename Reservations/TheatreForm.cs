@@ -55,6 +55,8 @@ namespace Reservations
         private void TheatreList_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTheatre = venueList.Find(item => item == TheatreList.SelectedItems[0]);
+            textBox1.Text = selectedTheatre.Name;
+            textBox2.Text = selectedTheatre.Seat_Location.Count.ToString();
         }
     }
 }
