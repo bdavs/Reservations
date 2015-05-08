@@ -19,15 +19,6 @@
     <Tickets />
   </Customer>
   <Customer>
-    <Name>Miles Tails Per Hour</Name>
-    <Address>Oh God No</Address>
-    <Phone>(897) 590-7473</Phone>
-    <Credit>0000-0000-0000-0000</Credit>
-    <Email>He'sShowingUpUninvited.jpg</Email>
-    <Size>100</Size>
-    <Tickets />
-  </Customer>
-  <Customer>
     <Name>abba</Name>
     <Address>123</Address>
     <Phone>(112) 121-2121</Phone>
@@ -43,6 +34,15 @@
     <Credit>5555-5555-5555-5555</Credit>
     <Email>klarue</Email>
     <Size>3</Size>
+    <Tickets />
+  </Customer>
+  <Customer>
+    <Name>Miles Tails Per Hour</Name>
+    <Address>Oh God No</Address>
+    <Phone>(897) 590-7473</Phone>
+    <Credit>0000-0000-0000-0000</Credit>
+    <Email>He'sShowingUpUninvited.jpg</Email>
+    <Size>100</Size>
     <Tickets />
   </Customer>
 </ArrayOfCustomer>

@@ -207,6 +207,10 @@
         <Y>180</Y>
       </Point>
       <Point>
+        <X>570</X>
+        <Y>180</Y>
+      </Point>
+      <Point>
         <X>810</X>
         <Y>180</Y>
       </Point>
@@ -221,6 +225,10 @@
       <Point>
         <X>900</X>
         <Y>210</Y>
+      </Point>
+      <Point>
+        <X>540</X>
+        <Y>240</Y>
       </Point>
       <Point>
         <X>90</X>
@@ -243,52 +251,24 @@
         <Y>330</Y>
       </Point>
       <Point>
-        <X>690</X>
+        <X>450</X>
         <Y>330</Y>
       </Point>
       <Point>
-        <X>270</X>
-        <Y>360</Y>
-      </Point>
-      <Point>
-        <X>300</X>
-        <Y>360</Y>
-      </Point>
-      <Point>
-        <X>330</X>
-        <Y>360</Y>
+        <X>690</X>
+        <Y>330</Y>
       </Point>
       <Point>
         <X>480</X>
         <Y>360</Y>
       </Point>
       <Point>
-        <X>240</X>
-        <Y>390</Y>
-      </Point>
-      <Point>
         <X>270</X>
-        <Y>390</Y>
-      </Point>
-      <Point>
-        <X>360</X>
         <Y>390</Y>
       </Point>
       <Point>
         <X>930</X>
         <Y>390</Y>
-      </Point>
-      <Point>
-        <X>270</X>
-        <Y>420</Y>
-      </Point>
-      <Point>
-        <X>300</X>
-        <Y>420</Y>
-      </Point>
-      <Point>
-        <X>330</X>
-        <Y>420</Y>
       </Point>
       <Point>
         <X>120</X>
@@ -299,47 +279,11 @@
         <Y>450</Y>
       </Point>
       <Point>
-        <X>270</X>
-        <Y>450</Y>
-      </Point>
-      <Point>
-        <X>300</X>
-        <Y>450</Y>
-      </Point>
-      <Point>
-        <X>330</X>
-        <Y>450</Y>
-      </Point>
-      <Point>
-        <X>360</X>
-        <Y>450</Y>
-      </Point>
-      <Point>
-        <X>390</X>
-        <Y>450</Y>
-      </Point>
-      <Point>
         <X>630</X>
         <Y>450</Y>
       </Point>
       <Point>
-        <X>300</X>
-        <Y>480</Y>
-      </Point>
-      <Point>
-        <X>330</X>
-        <Y>480</Y>
-      </Point>
-      <Point>
-        <X>450</X>
-        <Y>480</Y>
-      </Point>
-      <Point>
         <X>420</X>
-        <Y>510</Y>
-      </Point>
-      <Point>
-        <X>480</X>
         <Y>510</Y>
       </Point>
       <Point>
@@ -381,6 +325,74 @@
       <Point>
         <X>600</X>
         <Y>690</Y>
+      </Point>
+    </Seat_Location>
+    <Seats_Taken />
+  </Venue>
+  <Venue>
+    <Name>Ford Theater</Name>
+    <Size>100</Size>
+    <Seats_Available>100</Seats_Available>
+    <Seat_Location>
+      <Point>
+        <X>30</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>60</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>90</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>120</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>150</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>30</X>
+        <Y>60</Y>
+      </Point>
+      <Point>
+        <X>60</X>
+        <Y>60</Y>
+      </Point>
+      <Point>
+        <X>90</X>
+        <Y>60</Y>
+      </Point>
+      <Point>
+        <X>120</X>
+        <Y>60</Y>
+      </Point>
+      <Point>
+        <X>30</X>
+        <Y>90</Y>
+      </Point>
+      <Point>
+        <X>60</X>
+        <Y>90</Y>
+      </Point>
+      <Point>
+        <X>90</X>
+        <Y>90</Y>
+      </Point>
+      <Point>
+        <X>30</X>
+        <Y>120</Y>
+      </Point>
+      <Point>
+        <X>60</X>
+        <Y>120</Y>
+      </Point>
+      <Point>
+        <X>30</X>
+        <Y>150</Y>
       </Point>
     </Seat_Location>
   </Venue>
