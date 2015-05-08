@@ -14,13 +14,14 @@ namespace Reservations
     {
         public Button[] buttonArray = new Button[1000];
         public List<Point>seats = new List<Point>();
-        
+        public Venue tempVenue = new Venue();
         public string name1;
         public int number1;
         int oldIndex=-1;
         public TheatreLayout(Venue currentVenue)
         {
             InitializeComponent();
+            tempVenue = currentVenue;
             name1 = currentVenue.Name;
             number1 = currentVenue.Size;
             oldIndex = TheatreForm.venueList.FindIndex(i => i == currentVenue);
@@ -80,10 +81,12 @@ namespace Reservations
                 buttonArray[i].Font = new Font("Georgia",8);
                 buttonArray[i].Size = new Size(30, 30);
                 buttonArray[i].Location = new Point(horizontal, vertical);
-                
                 buttonArray[i].Text = rowDesignation + seatDesignation.ToString();
                 buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
+                bool taken = tempVenue.Seat_Location.Exists(g => g == buttonArray[i].Location);
+                if (taken == true)
+                    buttonArray[i].BackColor = Color.Red;
                 buttonArray[i].Tag = i;
                 if ((i + 1) % 40 == 0)
                 {

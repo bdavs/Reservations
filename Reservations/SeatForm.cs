@@ -26,9 +26,16 @@ namespace Reservations
 
         private void SeatForm_Load(object sender, EventArgs e)
         {
-            currentCustomer = UserForm.selectedCustomer;
-            customerIndex = customerList.IndexOf(currentCustomer);
+            //currentCustomer = UserForm.selectedCustomer;
+            
             currentShow = UserForm.selectedShow;
+            foreach (Customer q in customerList)
+            {
+                if (q.Name == UserForm.selectedCustomer.Name) 
+                    currentCustomer = q;
+            }
+            customerIndex = customerList.IndexOf(currentCustomer);
+
             foreach (Venue q in venueList)
             {
                 if (q.Name == currentShow.VenueName)
