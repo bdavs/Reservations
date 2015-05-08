@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Customer>
-    <Name>William Shakespeare</Name>
-    <Address>Church of the Holy Trinity, Stratford-upon-Avon, United Kingdom</Address>
-    <Phone>7815553460</Phone>
-    <Credit>1234567890123456</Credit>
-    <Email>thespeare@gmail.com</Email>
-    <Size>1</Size>
-  </Customer>
-  <Customer>
     <Name>Edward Albee</Name>
     <Address>Somewhere in Virginia</Address>
     <Phone>3334445555</Phone>
@@ -31,5 +23,13 @@
     <Credit>1222-5555-6767-8221</Credit>
     <Email>yourwrong@lifeisabitch.org</Email>
     <Size>1</Size>
+  </Customer>
+  <Customer>
+    <Name>Keegan</Name>
+    <Address>Keegan Way</Address>
+    <Phone>(555) 555-5555</Phone>
+    <Credit>5555-5555-5555-5555</Credit>
+    <Email>klarue</Email>
+    <Size>3</Size>
   </Customer>
 </ArrayOfCustomer>

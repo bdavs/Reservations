@@ -29,7 +29,9 @@ namespace Reservations
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TheatreLayout TL = new TheatreLayout();
+            string number = textBox2.Text;
+            int num = Convert.ToInt32(number);
+            TheatreLayout TL = new TheatreLayout(textBox1.Text, num);
             TL.ShowDialog();
         }
 
