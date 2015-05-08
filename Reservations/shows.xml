@@ -70,4 +70,11 @@
     <Price>14.99</Price>
     <Available>true</Available>
   </Shows>
+  <Shows>
+    <Name>Dog on a Cold Copper Floor</Name>
+    <Date>2015-05-21T15:00:00</Date>
+    <VenueName>Huntington Theater</VenueName>
+    <Price>19.99</Price>
+    <Available>true</Available>
+  </Shows>
 </ArrayOfShows>

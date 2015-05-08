@@ -13,6 +13,7 @@ namespace Reservations
     public partial class AdminForm : Form
     {
         Customer selectedCustomer = new Customer();
+        Shows selectedShow = new Shows();
         public AdminForm()
         {
             InitializeComponent();
@@ -54,16 +55,33 @@ namespace Reservations
 
         private void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
+             if (editEventButton.Text == "Edit User")
+            {
+                try
+                {
+                    selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
+                }
+                catch (Exception ex)
+                {
+                    if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                          selectedCustomer = new Customer();
+                }
+             }
+             else
+             {
+                try
+                {
+                    selectedShow = UserForm.showList.Find(item => item == UserList.SelectedItems[0]);
+                }
+                catch (Exception ex)
+                {
+                    if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
+                          selectedShow = new Shows();
+                }
+             }
 
-            try
-            {
-                selectedCustomer = UserForm.customerList.Find(item => item == UserList.SelectedItems[0]);
-            }
-            catch (Exception ex)
-            {
-                if (ex is NullReferenceException || ex is ArgumentOutOfRangeException)
-                      selectedCustomer = new Customer();
-            }
+
+            
         }
 
         private void EditUserButton_Click(object sender, EventArgs e)
@@ -119,16 +137,24 @@ namespace Reservations
 
         private void editEventButton_Click(object sender, EventArgs e)
         {
-            UserAccountForm UAF = new UserAccountForm();
+            
             if (editEventButton.Text == "Edit User")
             {
                 UserForm.customerList = Customer.LoadCustomers();
                
-                UAF = new UserAccountForm(selectedCustomer,true);//dis now work
+                UserAccountForm UAF = new UserAccountForm(selectedCustomer,true);//dis now work
                 
                 UAF.Closed += new EventHandler(RefreshData);
                 
                 UAF.Show();   
+            }
+            else
+            {
+                UserForm.showList = Shows.LoadShows();
+                EventEditForm EEF = new EventEditForm(selectedShow);
+                EEF.Closed += new EventHandler(RefreshData);
+
+                EEF.Show();   
             }
         }
         private void RefreshData(object sender, EventArgs e)

@@ -47,6 +47,7 @@ namespace Reservations
            // ICollection<Shows> test = CollectionViewSource.GetDefaultView(showList);
             
         }
+
         private void displayAllShows()
         {
             showListBox.Items.Clear();
