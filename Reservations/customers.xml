@@ -10,15 +10,6 @@
     <Tickets />
   </Customer>
   <Customer>
-    <Name>tester mctesty</Name>
-    <Address>123 sesame st</Address>
-    <Phone>(222) 222-2222</Phone>
-    <Credit>2345-6789-0876-5425</Credit>
-    <Email>234fdysg@fjj.jpg</Email>
-    <Size>8</Size>
-    <Tickets />
-  </Customer>
-  <Customer>
     <Name>abba</Name>
     <Address>123</Address>
     <Phone>(112) 121-2121</Phone>
@@ -43,6 +34,15 @@
     <Credit>0000-0000-0000-0000</Credit>
     <Email>He'sShowingUpUninvited.jpg</Email>
     <Size>100</Size>
+    <Tickets />
+  </Customer>
+  <Customer>
+    <Name>tester mctesty</Name>
+    <Address>123 sesame st</Address>
+    <Phone>(222) 222-2222</Phone>
+    <Credit>2345-6789-0876-5425</Credit>
+    <Email>234fdysg@fjj.jpg</Email>
+    <Size>8</Size>
     <Tickets />
   </Customer>
 </ArrayOfCustomer>
