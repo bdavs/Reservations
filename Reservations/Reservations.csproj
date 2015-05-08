@@ -92,6 +92,12 @@
       <DependentUpon>TheatreLayout.cs</DependentUpon>
     </Compile>
     <Compile Include="Ticket.cs" />
+    <Compile Include="ticketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketForm.Designer.cs">
+      <DependentUpon>ticketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheatreLayout.resx">
       <DependentUpon>TheatreLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketForm.resx">
+      <DependentUpon>ticketForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccountForm.resx">
       <DependentUpon>UserAccountForm.cs</DependentUpon>

@@ -1,28 +1,24 @@
 <?xml version="1.0"?>
 <ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Customer>
-    <Name>Pompus White Guy</Name>
-    <Address>Practically Everywhere</Address>
-    <Phone>(345) 654-7753</Phone>
-    <Credit>1222-5555-6767-8221</Credit>
-    <Email>yourwrong@lifeisabitch.org</Email>
-    <Size>1</Size>
-  </Customer>
-  <Customer>
-    <Name>Keegan</Name>
-    <Address>Keegan Way</Address>
-    <Phone>(555) 555-5555</Phone>
-    <Credit>5555-5555-5555-5555</Credit>
-    <Email>klarue</Email>
-    <Size>3</Size>
-  </Customer>
-  <Customer>
-    <Name>tester mctesty</Name>
-    <Address>123 sesame st</Address>
-    <Phone>(222) 222-2222</Phone>
-    <Credit>2345-6789-0876-5425</Credit>
-    <Email>234fdysg@fjj.jpg</Email>
-    <Size>8</Size>
+    <Name>abba</Name>
+    <Address>123</Address>
+    <Phone>(112) 121-2121</Phone>
+    <Credit>1234-5678-9087-6543</Credit>
+    <Email>rew</Email>
+    <Size>5</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>For White Girls Who Have Considered Patricide When the Tortise Is Enuf</Name>
+          <Date>2015-06-25T18:30:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
   </Customer>
   <Customer>
     <Name>Miles Tails Per Hour</Name>
@@ -31,13 +27,107 @@
     <Credit>0000-0000-0000-0000</Credit>
     <Email>He'sShowingUpUninvited.jpg</Email>
     <Size>100</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>A Lawn Bike Named Apathy</Name>
+          <Date>2015-06-09T12:45:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>18.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
   </Customer>
   <Customer>
-    <Name>abba</Name>
-    <Address>123</Address>
-    <Phone>(112) 121-2121</Phone>
-    <Credit>1234-5678-9087-6543</Credit>
-    <Email>rew</Email>
-    <Size>5</Size>
+    <Name>Keegan</Name>
+    <Address>Keegan Way</Address>
+    <Phone>(555) 555-5555</Phone>
+    <Credit>5555-5555-5555-5555</Credit>
+    <Email>klarue</Email>
+    <Size>3</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>An Imperfect Wife</Name>
+          <Date>2015-08-14T16:30:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>14.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>1</SeatNumber>
+      </Ticket>
+    </Tickets>
+  </Customer>
+  <Customer>
+    <Name>Pompus White Guy</Name>
+    <Address>Practically Everywhere</Address>
+    <Phone>(345) 654-7753</Phone>
+    <Credit>1222-5555-6767-8221</Credit>
+    <Email>yourwrong@lifeisabitch.org</Email>
+    <Size>1</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>A Grape in the Moonlight</Name>
+          <Date>2015-06-03T21:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>19.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>45</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Birth of a Customer</Name>
+          <Date>2015-08-03T03:45:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>4.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>548</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Diddler on the Roof</Name>
+          <Date>2015-05-30T21:05:00</Date>
+          <VenueName>Globe Theater</VenueName>
+          <Price>100</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
+  </Customer>
+  <Customer>
+    <Name>tester mctesty</Name>
+    <Address>123 sesame st</Address>
+    <Phone>(222) 222-2222</Phone>
+    <Credit>2345-6789-0876-5425</Credit>
+    <Email>234fdysg@fjj.jpg</Email>
+    <Size>8</Size>
+    <Tickets>
+      <Ticket>
+        <Show>
+          <Name>A Midsummer Night's Scream</Name>
+          <Date>2015-05-06T19:00:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>14.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>4</SeatNumber>
+      </Ticket>
+      <Ticket>
+        <Show>
+          <Name>Bromeo and Griliet</Name>
+          <Date>2015-07-12T17:30:00</Date>
+          <VenueName>Huntington Theater</VenueName>
+          <Price>14.99</Price>
+          <Available>true</Available>
+        </Show>
+        <SeatNumber>3</SeatNumber>
+      </Ticket>
+    </Tickets>
   </Customer>
 </ArrayOfCustomer>
