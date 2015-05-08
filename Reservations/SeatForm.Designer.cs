@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SeatNumber = new System.Windows.Forms.TextBox();
+            this.PurchaseButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -40,22 +44,68 @@
             this.panel1.Size = new System.Drawing.Size(810, 470);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 517);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Seat Number";
+            // 
+            // SeatNumber
+            // 
+            this.SeatNumber.Enabled = false;
+            this.SeatNumber.Location = new System.Drawing.Point(162, 514);
+            this.SeatNumber.Name = "SeatNumber";
+            this.SeatNumber.Size = new System.Drawing.Size(100, 22);
+            this.SeatNumber.TabIndex = 2;
+            // 
+            // PurchaseButton
+            // 
+            this.PurchaseButton.Location = new System.Drawing.Point(999, 640);
+            this.PurchaseButton.Name = "PurchaseButton";
+            this.PurchaseButton.Size = new System.Drawing.Size(116, 97);
+            this.PurchaseButton.TabIndex = 3;
+            this.PurchaseButton.Text = "Purchase Tickets";
+            this.PurchaseButton.UseVisualStyleBackColor = true;
+            this.PurchaseButton.Click += new System.EventHandler(this.PurchaseButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(862, 640);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(116, 97);
+            this.CancelButton.TabIndex = 4;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
             // SeatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 774);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.PurchaseButton);
+            this.Controls.Add(this.SeatNumber);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "SeatForm";
             this.Text = "SeatForm";
             this.Load += new System.EventHandler(this.SeatForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox SeatNumber;
+        private System.Windows.Forms.Button PurchaseButton;
+        private System.Windows.Forms.Button CancelButton;
 
     }
 }

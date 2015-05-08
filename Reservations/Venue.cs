@@ -18,6 +18,7 @@ namespace Reservations
         private int size;
         private int seats_available;
         private List<Point> seat_location;
+        private List<Point> seats_taken;
 
         public string Name
         {
@@ -40,7 +41,11 @@ namespace Reservations
             get { return seat_location; }
             set { seat_location = value; }
         }
-
+        public List<Point> Seats_Taken
+        {
+            get { return seats_taken; }
+            set { seats_taken = value; }
+        }
 
 
 
@@ -63,6 +68,14 @@ namespace Reservations
             seats_available = sa;
             seat_location = sl;
 
+        }
+        public Venue(string n, int s, int sa, List<Point> sl, List<Point> st)
+        {
+            name = n;
+            size = s;
+            seats_available = sa;
+            seat_location = sl;
+            seats_taken = st;
         }
         public static void XMLInit()
         {

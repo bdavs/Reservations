@@ -14,6 +14,7 @@ namespace Reservations
     {
         public Button[] buttonArray = new Button[1000];
         public List<Point>seats = new List<Point>();
+        
         public string name1;
         public int number1;
         int oldIndex;
@@ -69,6 +70,7 @@ namespace Reservations
                 buttonArray[i].Font = new Font("Georgia",8);
                 buttonArray[i].Size = new Size(30, 30);
                 buttonArray[i].Location = new Point(horizontal, vertical);
+                
                 buttonArray[i].Text = rowDesignation + seatDesignation.ToString();
                 buttonArray[i].MouseUp += buttonArray_click;
                 buttonArray[i].BackColor = Color.Green;
