@@ -124,7 +124,7 @@ namespace Reservations
             {
                 UserForm.customerList = Customer.LoadCustomers();
                
-                UAF = new UserAccountForm(selectedCustomer);//dis now work
+                UAF = new UserAccountForm(selectedCustomer,true);//dis now work
                 
                 UAF.Closed += new EventHandler(RefreshData);
                 

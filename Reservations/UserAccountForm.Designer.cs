@@ -41,6 +41,7 @@
             this.phoneNumberBox = new System.Windows.Forms.MaskedTextBox();
             this.creditCardBox = new System.Windows.Forms.MaskedTextBox();
             this.familySizeBox = new System.Windows.Forms.MaskedTextBox();
+            this.removeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameBox
@@ -95,7 +96,7 @@
             // 
             // CreateUserButton
             // 
-            this.CreateUserButton.Location = new System.Drawing.Point(68, 270);
+            this.CreateUserButton.Location = new System.Drawing.Point(30, 270);
             this.CreateUserButton.Name = "CreateUserButton";
             this.CreateUserButton.Size = new System.Drawing.Size(75, 23);
             this.CreateUserButton.TabIndex = 8;
@@ -153,11 +154,23 @@
             this.familySizeBox.Size = new System.Drawing.Size(189, 20);
             this.familySizeBox.TabIndex = 4;
             // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(111, 270);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(75, 23);
+            this.removeButton.TabIndex = 13;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Visible = false;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
             // UserAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 315);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.familySizeBox);
             this.Controls.Add(this.creditCardBox);
             this.Controls.Add(this.phoneNumberBox);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.MaskedTextBox phoneNumberBox;
         private System.Windows.Forms.MaskedTextBox creditCardBox;
         private System.Windows.Forms.MaskedTextBox familySizeBox;
+        private System.Windows.Forms.Button removeButton;
     }
 }
