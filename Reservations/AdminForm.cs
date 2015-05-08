@@ -29,6 +29,7 @@ namespace Reservations
             {
                 DateSelect.AddBoldedDate(s.Date);
             }
+            TicketBox.Visible = false;
         }
 
         private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
@@ -106,6 +107,9 @@ namespace Reservations
             editEventButton.Enabled = false;
             if (ViewUserButton.Text == "View All Users")
             {
+                DateLabel.Text = "Tickets";
+                DateSelect.Visible = false;
+                TicketBox.Visible = true;
                 UserLabel.Text = "Users";
                 editEventButton.Text = "Edit User";
                 addEventButtons.Text = "Add User(s)";
@@ -115,11 +119,15 @@ namespace Reservations
                 {
                     UserList.Items.Add(dude);
                 }
+                
                 UserList.DisplayMember = "Name";
                 UserList.Sorted = true;
             }
             else 
             {
+                DateLabel.Text = "Date";
+                DateSelect.Visible = true;
+                TicketBox.Visible = false;
                 UserLabel.Text = "Events";
                 editEventButton.Text = "Edit Event";
                 addEventButtons.Text = "Add Event(s)";
