@@ -14,10 +14,13 @@ namespace Reservations
     {
         public Button[] buttonArray = new Button[1000];
         public List<Point>seats = new List<Point>();
-        public TheatreLayout()
+        public string name1;
+        public int number1;
+        public TheatreLayout(string name, int number)
         {
             InitializeComponent();
-            
+            name1 = name;
+            number1 = number;
 
         }
 
@@ -44,6 +47,7 @@ namespace Reservations
 
             }*/
             CreateButtons();
+            
             
         }
         private void CreateButtons()
@@ -105,6 +109,10 @@ namespace Reservations
         private void TheatreLayout_FormClosing(object sender, FormClosingEventArgs e)
         {
             toList();
+            Venue temp = new Venue(name1,number1,number1,seats);
+            List<Venue> newVenue = new List<Venue>();
+            newVenue.Add(temp);
+            Venue.SaveVenues(newVenue);
         }
     }
 }
