@@ -126,5 +126,11 @@ namespace Reservations
         {
             editEventButton.Enabled = true;
         }
+
+        private void VenueButton_Click(object sender, EventArgs e)
+        {
+            TheatreForm TF = new TheatreForm();
+            TF.ShowDialog();
+        }
     }
 }
