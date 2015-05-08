@@ -61,11 +61,11 @@ namespace Reservations
 
             Shows Show0 = new Shows("A Midsummer Night's Scream", new DateTime(2015, 5, 5, 19, 0, 0), V[0].Name, 14.99, true);
             Shows Show1 = new Shows("Dog on a Cold Copper Floor", new DateTime(2015, 5, 20, 15, 0, 0), V[1].Name, 19.99, true);
-            Shows Show2 = new Shows("A Grape in the Moonlight", new DateTime(2015, 6, 3, 21, 0, 0), V[2].Name, 19.99, true);
+            Shows Show2 = new Shows("A Grape in the Moonlight", new DateTime(2015, 6, 3, 21, 0, 0), V[1].Name, 19.99, true);
             Shows Show3 = new Shows("A Lawn Bike Named Apathy", new DateTime(2015, 6, 15, 12, 30, 0), V[1].Name, 14.99, true);
             Shows Show4 = new Shows("For White Girls Who Have Considered Patricide When the Tortise Is Enuf", new DateTime(2015, 6, 25, 18, 30, 0), V[0].Name, 19.99, true);
             Shows Show5 = new Shows("An Action Figure's Mansion", new DateTime(2015, 7, 1, 10, 0, 0), V[0].Name, 14.99, true);
-            Shows Show6 = new Shows("Bromeo and Griliet", new DateTime(2015, 7, 12, 17, 30, 0), V[2].Name, 19.99, true);
+            Shows Show6 = new Shows("Bromeo and Griliet", new DateTime(2015, 7, 12, 17, 30, 0), V[1].Name, 19.99, true);
             Shows Show7 = new Shows("The Insignifigance of Abstaining Indifference", new DateTime(2015, 7, 25, 15, 30, 0), V[0].Name, 19.99, true);
             Shows Show8 = new Shows("Birth of a Customer", new DateTime(2015, 8, 3, 3, 45, 0), V[0].Name, 4.99, true);
             Shows Show9 = new Shows("An Imperfect Wife", new DateTime(2015, 8, 14, 16, 30, 0), V[1].Name, 14.99, true);
