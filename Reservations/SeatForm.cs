@@ -25,7 +25,7 @@ namespace Reservations
         {
             currentCustomer = UserForm.selectedCustomer;
             currentShow = UserForm.selectedShow;
-            currentVenue = currentShow.Venue;
+            currentVenue = currentShow.VenueName;
         }
 
         private void CreateButtons()

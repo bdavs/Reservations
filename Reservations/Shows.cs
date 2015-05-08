@@ -12,7 +12,7 @@ namespace Reservations
     {
         private string name;
         private DateTime date;
-        private Venue venue;
+        private string venue;
         private double price;
         private bool available;
 
@@ -26,7 +26,7 @@ namespace Reservations
             get { return date; }
             set { date = value; }
         }
-        public Venue Venue
+        public string VenueName
         {
             get{ return venue; }
             set{ venue=value; }
@@ -44,7 +44,7 @@ namespace Reservations
 
         public Shows()
         { }
-        public Shows(string n, DateTime d, Venue v, double p, bool a)
+        public Shows(string n, DateTime d, string v, double p, bool a)
         {
             name = n;
             date = d;
@@ -59,16 +59,16 @@ namespace Reservations
             List<Shows> L = new List<Shows>();
             List<Venue> V = Venue.LoadVenues();
 
-            Shows Show0 = new Shows("A Midsummer Night's Scream", new DateTime(2015, 5, 5, 19, 0, 0), V[0], 14.99, true);
-            Shows Show1 = new Shows("Dog on a Cold Copper Floor", new DateTime(2015, 5, 20, 15, 0, 0), V[1], 19.99, true);
-            Shows Show2 = new Shows("A Grape in the Moonlight", new DateTime(2015, 6, 3, 21, 0, 0), V[2], 19.99, true);
-            Shows Show3 = new Shows("A Lawn Bike Named Apathy", new DateTime(2015, 6, 15, 12, 30, 0), V[1], 14.99, true);
-            Shows Show4 = new Shows("For White Girls Who Have Considered Patricide When the Tortise Is Enuf", new DateTime(2015, 6, 25, 18, 30, 0), V[0], 19.99, true);
-            Shows Show5 = new Shows("An Action Figure's Mansion", new DateTime(2015, 7, 1, 10, 0, 0), V[0], 14.99, true);
-            Shows Show6 = new Shows("Bromeo and Griliet", new DateTime(2015, 7, 12, 17, 30, 0), V[0], 19.99, true);
-            Shows Show7 = new Shows("The Insignifigance of Abstaining Indifference", new DateTime(2015, 7, 25, 15, 30, 0), V[0], 19.99, true);
-            Shows Show8 = new Shows("Birth of a Customer", new DateTime(2015, 8, 3, 3, 45, 0), V[0], 4.99, true);
-            Shows Show9 = new Shows("An Imperfect Wife", new DateTime(2015, 8, 14, 16, 30, 0), V[0], 14.99, true);
+            Shows Show0 = new Shows("A Midsummer Night's Scream", new DateTime(2015, 5, 5, 19, 0, 0), V[0].Name, 14.99, true);
+            Shows Show1 = new Shows("Dog on a Cold Copper Floor", new DateTime(2015, 5, 20, 15, 0, 0), V[1].Name, 19.99, true);
+            Shows Show2 = new Shows("A Grape in the Moonlight", new DateTime(2015, 6, 3, 21, 0, 0), V[2].Name, 19.99, true);
+            Shows Show3 = new Shows("A Lawn Bike Named Apathy", new DateTime(2015, 6, 15, 12, 30, 0), V[1].Name, 14.99, true);
+            Shows Show4 = new Shows("For White Girls Who Have Considered Patricide When the Tortise Is Enuf", new DateTime(2015, 6, 25, 18, 30, 0), V[0].Name, 19.99, true);
+            Shows Show5 = new Shows("An Action Figure's Mansion", new DateTime(2015, 7, 1, 10, 0, 0), V[0].Name, 14.99, true);
+            Shows Show6 = new Shows("Bromeo and Griliet", new DateTime(2015, 7, 12, 17, 30, 0), V[2].Name, 19.99, true);
+            Shows Show7 = new Shows("The Insignifigance of Abstaining Indifference", new DateTime(2015, 7, 25, 15, 30, 0), V[0].Name, 19.99, true);
+            Shows Show8 = new Shows("Birth of a Customer", new DateTime(2015, 8, 3, 3, 45, 0), V[0].Name, 4.99, true);
+            Shows Show9 = new Shows("An Imperfect Wife", new DateTime(2015, 8, 14, 16, 30, 0), V[1].Name, 14.99, true);
             Shows[] Showz={Show0,Show1,Show2,Show3,Show4,Show5,Show6,Show7,Show8,Show9};
             L.AddRange(Showz);
             using (var stream = new FileStream(fileName,FileMode.Create))

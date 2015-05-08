@@ -52,7 +52,7 @@ namespace Reservations
             showListBox.Items.Clear();
             foreach (Shows s in showList)
             {
-                ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                ListViewItem t = new ListViewItem(new string[] { s.Name, s.VenueName, s.Date.ToString() });
                 showListBox.Items.Add(t);
 
             }
@@ -91,7 +91,7 @@ namespace Reservations
             {
                 if (s.Date.Date == monthCalendar.TodayDate)
                 {
-                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.VenueName, s.Date.ToString() });
                     showListBox.Items.Add(t);
                 }
             }
@@ -158,7 +158,7 @@ namespace Reservations
             {
                 if (s.Date.Date == mc.SelectionStart)
                 {
-                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.Venue.Name, s.Date.ToString() });
+                    ListViewItem t = new ListViewItem(new string[] { s.Name, s.VenueName, s.Date.ToString() });
                     showListBox.Items.Add(t);
                 }
             }
