@@ -13,7 +13,7 @@ namespace Reservations
     public partial class TheatreForm : Form
     {
         Venue selectedTheatre = new Venue();
-        List<Venue> venueList = new List<Venue>();
+        public static List<Venue> venueList = new List<Venue>();
         public TheatreForm()
         {
             InitializeComponent();

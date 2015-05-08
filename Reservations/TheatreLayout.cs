@@ -16,11 +16,13 @@ namespace Reservations
         public List<Point>seats = new List<Point>();
         public string name1;
         public int number1;
+        int oldIndex;
         public TheatreLayout(Venue currentVenue)
         {
             InitializeComponent();
             name1 = currentVenue.Name;
             number1 = currentVenue.Size;
+            oldIndex = TheatreForm.venueList.FindIndex(i => i == currentVenue);
 
         }
 
@@ -113,7 +115,7 @@ namespace Reservations
             Venue temp = new Venue(name1,number1,number1,seats);
             List<Venue> newVenue = new List<Venue>();
             newVenue = Venue.LoadVenues();
-            newVenue.Add(temp);
+            newVenue[oldIndex] = temp;
             Venue.SaveVenues(newVenue);
         }
     }
