@@ -45,6 +45,7 @@
             this.DateSelect.Location = new System.Drawing.Point(18, 51);
             this.DateSelect.Name = "DateSelect";
             this.DateSelect.TabIndex = 8;
+            this.DateSelect.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateChanged);
             this.DateSelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateSelected);
             // 
             // UserList
@@ -135,7 +136,7 @@
             // VenueButton
             // 
             this.VenueButton.Location = new System.Drawing.Point(504, 22);
-            this.VenueButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VenueButton.Margin = new System.Windows.Forms.Padding(2);
             this.VenueButton.Name = "VenueButton";
             this.VenueButton.Size = new System.Drawing.Size(88, 25);
             this.VenueButton.TabIndex = 17;
