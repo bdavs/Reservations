@@ -83,6 +83,7 @@
             this.monthCalendar.Location = new System.Drawing.Point(12, 58);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 7;
+            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
             this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
             // 
             // CheckoutButton

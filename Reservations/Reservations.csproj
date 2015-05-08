@@ -64,6 +64,12 @@
       <DependentUpon>AdminPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="EventEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventEditForm.Designer.cs">
+      <DependentUpon>EventEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeatForm.cs">
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPassword.resx">
       <DependentUpon>AdminPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventEditForm.resx">
+      <DependentUpon>EventEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

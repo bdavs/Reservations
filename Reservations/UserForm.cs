@@ -38,7 +38,7 @@ namespace Reservations
             listViewSetup();
             displayAllShows();
             CheckoutButton.Enabled = false;
-            
+            SeatSelectButton.Enabled = false;
             foreach (Shows s in showList)
             {
                 monthCalendar.AddBoldedDate(s.Date);
@@ -162,6 +162,7 @@ namespace Reservations
                     showListBox.Items.Add(t);
                 }
             }
+            SetGroups(1);
             
             
         }
@@ -366,6 +367,7 @@ namespace Reservations
             }
             if ((tickets > 0) && (selectedCustomer.Name != null))
                 CheckoutButton.Enabled = true;
+            SeatSelectButton.Enabled = true;
         }
 
         private void ticketsComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -376,6 +378,11 @@ namespace Reservations
         }
 
         private void nameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
