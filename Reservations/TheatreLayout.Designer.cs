@@ -32,9 +32,10 @@
             // 
             // TheatreLayout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 328);
+            this.ClientSize = new System.Drawing.Size(933, 568);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TheatreLayout";
             this.Text = "TheatreLayout";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TheatreLayout_FormClosing);

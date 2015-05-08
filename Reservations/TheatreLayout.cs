@@ -23,6 +23,7 @@ namespace Reservations
             name1 = currentVenue.Name;
             number1 = currentVenue.Size;
             oldIndex = TheatreForm.venueList.FindIndex(i => i == currentVenue);
+            this.WindowState = FormWindowState.Maximized;
 
         }
 

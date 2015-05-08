@@ -141,9 +141,7 @@ namespace Reservations
             if (editEventButton.Text == "Edit User")
             {
                 UserForm.customerList = Customer.LoadCustomers();
-               
-                UserAccountForm UAF = new UserAccountForm(selectedCustomer,true);//dis now work
-                
+                UserAccountForm UAF = new UserAccountForm(selectedCustomer,true);//dis now work 
                 UAF.Closed += new EventHandler(RefreshData);
                 
                 UAF.Show();   
@@ -174,6 +172,11 @@ namespace Reservations
                 foreach (Shows s in UserForm.showList)
                     UserList.Items.Add(s);
                 editEventButton.Enabled = false;
+                DateSelect.RemoveAllBoldedDates();
+                foreach (Shows s in UserForm.showList)
+                {
+                    DateSelect.AddBoldedDate(s.Date);
+                }
 
             }
         }
