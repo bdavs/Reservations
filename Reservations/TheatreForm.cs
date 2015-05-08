@@ -40,7 +40,7 @@ namespace Reservations
         {
             string number = textBox2.Text;
             int num = Convert.ToInt32(number);
-            TheatreLayout TL = new TheatreLayout(textBox1.Text, num);
+            TheatreLayout TL = new TheatreLayout(currentVenue); //EDIT THIS HERE TO THE VENUE YOU ARE PASSING
             TL.ShowDialog();
         }
 

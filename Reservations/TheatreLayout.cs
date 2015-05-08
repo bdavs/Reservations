@@ -16,11 +16,11 @@ namespace Reservations
         public List<Point>seats = new List<Point>();
         public string name1;
         public int number1;
-        public TheatreLayout(string name, int number)
+        public TheatreLayout(Venue currentVenue)
         {
             InitializeComponent();
-            name1 = name;
-            number1 = number;
+            name1 = currentVenue.Name;
+            number1 = currentVenue.Size;
 
         }
 
@@ -64,6 +64,7 @@ namespace Reservations
                 rowDesignation = rowLetterString[i / 40];
                 seatDesignation = (i % 40) + 1;
                 buttonArray[i] = new Button();
+                buttonArray[i].Font = new Font("Georgia",8);
                 buttonArray[i].Size = new Size(30, 30);
                 buttonArray[i].Location = new Point(horizontal, vertical);
                 buttonArray[i].Text = rowDesignation + seatDesignation.ToString();
@@ -111,6 +112,7 @@ namespace Reservations
             toList();
             Venue temp = new Venue(name1,number1,number1,seats);
             List<Venue> newVenue = new List<Venue>();
+            newVenue = Venue.LoadVenues();
             newVenue.Add(temp);
             Venue.SaveVenues(newVenue);
         }
