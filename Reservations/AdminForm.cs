@@ -24,11 +24,32 @@ namespace Reservations
             UserList.DisplayMember = "Name";
             UserList.Sorted = true;
             editEventButton.Enabled = false;
+            foreach (Shows s in UserForm.showList)
+            {
+                DateSelect.AddBoldedDate(s.Date);
+            }
         }
 
         private void DateSelect_DateSelected(object sender, DateRangeEventArgs e)
         {
+            MonthCalendar mc = sender as MonthCalendar;
 
+            UserList.Items.Clear();
+            foreach (Shows s in UserForm.showList)
+            {
+                if (s.Date.Date == mc.SelectionStart)
+                {
+                    UserList.Items.Add(s);
+                }
+                
+                
+            }
+            UserLabel.Text = "Events";
+            editEventButton.Text = "Edit Event";
+            addEventButtons.Text = "Add Event(s)";
+            ViewUserButton.Text = "View All Users";
+            UserList.DisplayMember = "Name";
+            UserList.Sorted = true;
         }
 
         private void UserList_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,6 +163,11 @@ namespace Reservations
 
                 UAF.Show();
             }
+        }
+
+        private void DateSelect_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }
