@@ -57,7 +57,7 @@
             // 
             // SeatNumber
             // 
-            this.SeatNumber.Enabled = false;
+            this.SeatNumber.ForeColor = System.Drawing.Color.Red;
             this.SeatNumber.Location = new System.Drawing.Point(162, 514);
             this.SeatNumber.Name = "SeatNumber";
             this.SeatNumber.Size = new System.Drawing.Size(100, 22);

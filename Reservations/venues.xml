@@ -407,6 +407,22 @@
         <X>210</X>
         <Y>90</Y>
       </Point>
+      <Point>
+        <X>30</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>60</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>90</X>
+        <Y>30</Y>
+      </Point>
+      <Point>
+        <X>120</X>
+        <Y>30</Y>
+      </Point>
     </Seats_Taken>
   </Venue>
 </ArrayOfVenue>
