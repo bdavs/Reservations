@@ -4,18 +4,15 @@
     <Name>Globe Theater</Name>
     <Size>300</Size>
     <Seats_Available>300</Seats_Available>
-    <Seat_Location />
   </Venue>
   <Venue>
     <Name>Ford Theater</Name>
     <Size>200</Size>
     <Seats_Available>200</Seats_Available>
-    <Seat_Location />
   </Venue>
   <Venue>
     <Name>Huntington Theater</Name>
     <Size>400</Size>
     <Seats_Available>400</Seats_Available>
-    <Seat_Location />
   </Venue>
 </ArrayOfVenue>
