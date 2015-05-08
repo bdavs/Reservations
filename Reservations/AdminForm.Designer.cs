@@ -45,7 +45,7 @@
             this.DateSelect.Location = new System.Drawing.Point(18, 51);
             this.DateSelect.Name = "DateSelect";
             this.DateSelect.TabIndex = 8;
-            this.DateSelect.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateChanged);
+            //this.DateSelect.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateChanged);
             this.DateSelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.DateSelect_DateSelected);
             // 
             // UserList

@@ -202,7 +202,7 @@ namespace Reservations
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 // Closes the parent form. 
-                this.Close();
+                
             }
 
         }
